@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NANDAS</title>
+</head>
+<body>
+
+<h1><a href="/admin/mantnandaapp/nanda/">NANDAS</a></h1>
+<ul>
+    {% for nanda in listado_nandas %}
+        <li>{{ nanda.id }}.-  <a href="/lista_nandas/{{ nanda.id }}">{{ nanda.titulo }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
