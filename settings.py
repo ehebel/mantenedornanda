@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'mantenedornanda.mantnandaapp',
     'mantenedornanda.mantnicapp',
     'mantenedornanda.mantnocapp',
+    'mantenedornanda.modeladorcie9',
 )
 
 # A sample logging configuration. The only tangible logging
