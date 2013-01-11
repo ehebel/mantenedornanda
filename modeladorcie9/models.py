@@ -73,5 +73,16 @@ class cas_procedimiento(models.Model):
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
 
-
+#tabla transitoria de descripciones de CAS procedimiento para tener sinonimos
+class cas_procedimiento_desc(models.Model):
+    OPCIONES_TIPO = (
+        (1,'Preferido'),
+        (2,'Sinonimo Visible'),
+        (3,'Descripcion Completa'),
+        (4,'Error tipografico'),
+        )
+    estado = models.BooleanField(default=0)
+    idconcepto = models.ForeignKey(cas_procedimiento)
+    termino = models.CharField(max_length=255)
+    tipodescripcion = models.IntegerField(choices=OPCIONES_TIPO)
 

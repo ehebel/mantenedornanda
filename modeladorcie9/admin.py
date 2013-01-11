@@ -8,6 +8,8 @@ class procedimientoAdmin(admin.ModelAdmin):
     search_fields = ('grpdescripcion',)
     filter_vertical = ('cienueve',)
 
+#class proc_descAdmin(admin.ModelAdmin):
+
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
 admin.site.register(cas_conj_mapeo)
@@ -15,7 +17,8 @@ admin.site.register(cas_mapsalida)
 admin.site.register(cas_mapdestino)
 admin.site.register(cas_mapeo)
 
-
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
+admin.site.register(cas_procedimiento_desc)
+
 __author__ = 'ehebel'
