@@ -73,7 +73,7 @@ class cas_procedimiento(models.Model):
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
 
-#tabla transitoria de descripciones de CAS procedimiento para tener sinonimos
+#tabla transitoria de descripciones de CAS procedimiento para tener sinonimo
 class cas_procedimiento_desc(models.Model):
     OPCIONES_TIPO = (
         (1,'Preferido'),
