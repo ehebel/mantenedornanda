@@ -12,6 +12,10 @@ class cas_concepto(models.Model):
     fecha_creacion = models.DateTimeField()
     usuario_baja = models.ForeignKey(User, null=True, related_name='relacion_usuario_baja')
     fecha_baja = models.DateTimeField(null = True)
+    def __unicode__(self):
+        return self.descripcioncompleta
+    class Meta:
+        ordering=['descripcioncompleta']
 
 class cas_descripcion(models.Model):
     OPCIONES_TIPO = (
@@ -25,6 +29,10 @@ class cas_descripcion(models.Model):
     idconcepto = models.ForeignKey(cas_concepto)
     termino = models.CharField(max_length=255)
     tipodescripcion = models.IntegerField(choices=OPCIONES_TIPO)
+    def __unicode__(self):
+        return self.iddescripcion
+    class Meta:
+        ordering=['iddescripcion']
 
 class cas_conj_mapeo(models.Model):
     idmapset = models.BigIntegerField() #autoincremetar
@@ -52,7 +60,10 @@ class cas_mapeo(models.Model):
     mapdestino = models.ForeignKey(cas_mapdestino)
     mapregla = models.CharField(max_length=255)
     mapadvertencia = models.IntegerField()
-
+    def __unicode__(self):
+        return self.idmapset
+    class Meta:
+        ordering=['idmapset']
 
 class cienueve(models.Model):
     codigo = models.CharField(max_length=10)
@@ -64,9 +75,9 @@ class cienueve(models.Model):
     class Meta:
         ordering=['codigo']
 
-#ID_INTERVENCION_CLINICA	INTE_GLOSA	CODGRUPO	GRPDESCRIPCION	CODSUBGRUPO	SGRDESCRIPCION	INTE_CODIGO_FONASA
+
 class cas_procedimiento(models.Model):
-    idintervencionclinica = models.BigIntegerField()
+    idintervencionclinica = models.CharField(max_length=20)
     integlosa = models.CharField(max_length=255)
     codgrupo = models.CharField(max_length=10)
     grpdescripcion = models.CharField(max_length=255)
@@ -74,6 +85,10 @@ class cas_procedimiento(models.Model):
     sgrdescripcion = models.CharField(max_length=255)
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
+    def __unicode__(self):
+        return self.id
+    class Meta:
+        ordering=['id']
 
 #tabla transitoria de descripciones de CAS procedimiento para tener sinonimo
 class cas_procedimiento_desc(models.Model):
