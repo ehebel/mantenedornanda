@@ -86,7 +86,7 @@ class cas_procedimiento(models.Model):
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
     def __unicode__(self):
-        return self.id
+        return self.integlosa
     class Meta:
         ordering=['id']
 
