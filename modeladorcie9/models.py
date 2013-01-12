@@ -64,8 +64,10 @@ class cienueve(models.Model):
     class Meta:
         ordering=['codigo']
 
-
+#ID_INTERVENCION_CLINICA	INTE_GLOSA	CODGRUPO	GRPDESCRIPCION	CODSUBGRUPO	SGRDESCRIPCION	INTE_CODIGO_FONASA
 class cas_procedimiento(models.Model):
+    idintervencionclinica = models.BigIntegerField()
+    integlosa = models.CharField(max_length=255)
     codgrupo = models.CharField(max_length=10)
     grpdescripcion = models.CharField(max_length=255)
     codsubgrupo = models.CharField(max_length=10)
