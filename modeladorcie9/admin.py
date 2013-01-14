@@ -5,7 +5,7 @@ class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
 
 class procedimientoAdmin(admin.ModelAdmin):
-    list_display = ('idintervencionclinica','integlosa','grpdescripcion','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa')
+    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa')
     fields = ('idintervencionclinica','integlosa','grpdescripcion')
 #    search_fields = ('integlosa',)
 #    filter_vertical = ('cienueve',)
