@@ -54,10 +54,9 @@ class nandaClaseAdmin(admin.ModelAdmin):
     filter_vertical = ('nanda',)
 
 class nandaCaracteristicaAdmin(admin.ModelAdmin):
-    list_display = ('id',)
-#    list_display = ('id','titulo','tipo','subtipo',)
-#    search_fields = ('titulo',)
-#    list_filter = ('tipo',)
+    list_display = ('id','titulo','tipo','subtipo',)
+    search_fields = ('titulo',)
+    list_filter = ('tipo',)
 
 class nandaValoracionAdmin(admin.ModelAdmin):
     filter_vertical = ('nanda',)
