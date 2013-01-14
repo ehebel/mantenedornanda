@@ -6,9 +6,12 @@ class cienueveAdmin(admin.ModelAdmin):
 
 class procedimientoAdmin(admin.ModelAdmin):
     search_fields = ('grpdescripcion',)
-    filter_vertical = ('cienueve',)
+#    filter_vertical = ('cienueve',)
+    def __unicode__(self):
+        return self.grpdescripcion
+    class Meta:
+        ordering=['id']
 
-#class proc_descAdmin(admin.ModelAdmin):
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)

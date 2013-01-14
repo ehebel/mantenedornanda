@@ -1,18 +1,29 @@
 Comandos que deben ser ejecutados para subir las bases de datos a mantenedorNANDADB
 
 mantnandaapp
+load data local infile '~/Dropbox/COMPARTIDA/ProyectosDjango/databases/NANDA.csv' into table mantnandaapp_nanda fields terminated by '|' lines termin
+ated by '\n';
 -
 -
+
+    load data local infile '~/Dropbox/COMPARTIDA/ProyectosDjango/databases/NANDA_relClase.csv' into table mantnandaapp_nandaclase_nanda fields terminated
+ by '|' lines terminated by '\n';
+
 mantnicapp
--
--
+
+
 
 mantnocapp
 -
 -
 
 modeladorcie9
--
--
 
 
+load data local infile '~/Dropbox/COMPARTIDA/ProyectosDjango/INTERV.txt' into table modeladorcie9_cas_procedimiento fields terminated by '*|*' lines
+terminated by '\n' IGNORE 1 LINES;
+
+
+SET character_set_database=utf8;
+After executing the LOAD DATA INFILE-command you can restore your previous setting by executing:
+SET character_set_database=default;
