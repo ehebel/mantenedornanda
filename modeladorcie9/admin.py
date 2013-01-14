@@ -5,10 +5,12 @@ class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
 
 class procedimientoAdmin(admin.ModelAdmin):
-    search_fields = ('grpdescripcion',)
+    list_display = ('idintervencionclinica','integlosa','grpdescripcion')
+    fields = ('idintervencionclinica','integlosa','grpdescripcion')
+#    search_fields = ('integlosa',)
 #    filter_vertical = ('cienueve',)
     def __unicode__(self):
-        return self.grpdescripcion
+        return self.integlosa
     class Meta:
         ordering=['id']
 
