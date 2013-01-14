@@ -4,29 +4,29 @@
     <title>NANDA {{ selec_nanda.numero }}</title>
 </head>
 <body>
-<h2>NANDA {{ selec_nanda.numero }}: <a href="/admin/MantNandaApp/nanda/{{ selec_nanda.pk }}">{{ selec_nanda.titulo }}</a></h2>
+<h2>NANDA {{ selec_nanda.numero }}: <a href="/admin/mantnandaapp/nanda/{{ selec_nanda.pk }}">{{ selec_nanda.titulo }}</a></h2>
 
 {% for clase_set in listado_clases %}
-    <h3>Dominio {{ clase_set.dominio_id }}: <a href="/admin/MantNandaApp/nandadominio/{{ clase_set.dominio_id }}">{{ clase_set.dominio }}</a></h3>
-    <h4>Clase {{ clase_set.id }}: <a href="/admin/MantNandaApp/nandaclase/{{ clase_set.id }}">{{ clase_set.titulo }}</a></h4>
+    <h3>Dominio {{ clase_set.dominio_id }}: <a href="/admin/mantnandaapp/nandadominio/{{ clase_set.dominio_id }}">{{ clase_set.dominio }}</a></h3>
+    <h4>Clase {{ clase_set.id }}: <a href="/admin/mantnandaapp/nandaclase/{{ clase_set.id }}">{{ clase_set.titulo }}</a></h4>
 {% endfor %}
 <hr>
 
 {% for caract in listado_caract %}
-<li>{{ caract.tipo }}.- <a href="/admin/MantNandaApp/nandacaracteristica/{{ caract.id }}">{{ caract.titulo }}</a></li>
+<li>{{ caract.tipo }}.- <a href="/admin/mantnandaapp/nandacaracteristica/{{ caract.id }}">{{ caract.titulo }}</a></li>
 {% endfor %}
 
 <hr>
 <h3>NOC</h3>
 {% for relnandanoc in nandanoc %}
-    <li><a href="/admin/MantNocApp/relacionnandanoc/{{ relnandanoc.id }}">{{ relnandanoc.prioridad }} -
-        <a href="/admin/MantNocApp/noc/{{ relnandanoc.noc.id }}">{{ relnandanoc.noc.titulo }}</a></li>
+    <li><a href="/admin/mantnocapp/relacionnandanoc/{{ relnandanoc.id }}">{{ relnandanoc.prioridad }} -
+        <a href="/admin/mantnocapp/noc/{{ relnandanoc.noc.id }}">{{ relnandanoc.noc.titulo }}</a></li>
 {% endfor %}
 
 <hr>
 <h3>NIC</h3>
 {% for relnandanic in nandanic %}
-    <li><a href="/admin/MantNicApp/nic/{{ relnandanic.nic.id }}">{{ relnandanic.nic.titulo }}</a></li>
+    <li><a href="/admin/mantnicapp/nic/{{ relnandanic.nic.id }}">{{ relnandanic.nic.titulo }}</a></li>
 {% endfor %}
 </body>
 </html>
