@@ -23,6 +23,7 @@ modeladorcie9
 load data local infile '~/Dropbox/COMPARTIDA/ProyectosDjango/INTERV.txt' into table modeladorcie9_cas_procedimiento fields terminated by '*|*' lines
 terminated by '\n' IGNORE 1 LINES;
 
+SET foreign_key_checks = 0;
 
 SET character_set_database=utf8;
 After executing the LOAD DATA INFILE-command you can restore your previous setting by executing:

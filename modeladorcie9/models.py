@@ -102,4 +102,7 @@ class cas_procedimiento_desc(models.Model):
     idconcepto = models.ForeignKey(cas_procedimiento)
     termino = models.CharField(max_length=255)
     tipodescripcion = models.IntegerField(choices=OPCIONES_TIPO)
-
+    def __unicode__(self):
+        return self.termino
+    class Meta:
+        ordering=['id']
