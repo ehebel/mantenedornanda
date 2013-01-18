@@ -16,6 +16,17 @@ class procedimientoAdmin(admin.ModelAdmin):
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
 
+class relacionProcCieAdmin(admin.ModelAdmin):
+    list_display = ('titulos_proc','titulos_cienueve')
+    def titulos_proc(self, obj):
+        return '%s'%obj.cas_procedimiento.grpdescripcion
+    titulos_proc.short_description = 'Titulos Procedimientos'
+    def titulos_cienueve(self, obj):
+        return '%s'%obj.cienueve.descriptor
+    titulos_cienueve.short_description = 'Titulos Cie-9'
+    list_display_links = ('titulos_proc','titulos_cienueve')
+
+
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
 admin.site.register(cas_conj_mapeo)
@@ -26,5 +37,7 @@ admin.site.register(cas_mapeo)
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
 admin.site.register(cas_procedimiento_desc, cas_proc_descAdmin)
+admin.site.register(cas_procedimiento_cienueve, relacionProcCieAdmin)
+
 
 __author__ = 'ehebel'

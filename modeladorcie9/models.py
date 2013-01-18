@@ -106,3 +106,7 @@ class cas_procedimiento_desc(models.Model):
         return self.termino
     class Meta:
         ordering=['id']
+
+class cas_procedimiento_cienueve(models.Model):
+    cas_procedimiento_id = models.ForeignKey(cas_procedimiento)
+    cienueve_id = models.ForeignKey(cienueve)
