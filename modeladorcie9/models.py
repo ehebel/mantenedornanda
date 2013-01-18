@@ -85,6 +85,7 @@ class cas_procedimiento(models.Model):
     sgrdescripcion = models.CharField(max_length=255)
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
+    revisado = models.BooleanField()
     def __unicode__(self):
         return self.integlosa
     class Meta:

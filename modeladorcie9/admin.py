@@ -7,9 +7,12 @@ class cienueveAdmin(admin.ModelAdmin):
     list_filter = ('area','clasificacion')
 
 class procedimientoAdmin(admin.ModelAdmin):
-    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa')
-    #fields = ('idintervencionclinica','integlosa','grpdescripcion')
+    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa','revisado')
+    readonly_fields = ('idintervencionclinica','integlosa','codgrupo'
+                       ,'grpdescripcion','codsubgrupo','sgrdescripcion'
+                       ,'inte_codigo_fonasa')
     raw_id_fields = ('cienueve',)
+    list_filter = ('revisado',)
     class Meta:
         ordering=['id']
 
@@ -24,9 +27,6 @@ class relacionProcCieAdmin(admin.ModelAdmin):
     def titulos_cienueve(self, obj):
         return '%s'%obj.cienueve.descriptor
     titulos_cienueve.short_description = 'Titulos Cie-9'
-    #list_display_links = ('titulos_proc','titulos_cienueve')
-    #fields = ('titulos_proc','titulos_cienueve')
-                              #No lo puedo hacer funcionar
     raw_id_fields = ('cienueve',)
     class Meta:
         ordering = ['cas_procedimiento_id','id']
