@@ -3,15 +3,15 @@ from mantenedornanda.modeladorcie9.models import *
 
 class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
+    search_fields = ('descriptor','codigo')
+    list_filter = ('area','clasificacion')
 
 class procedimientoAdmin(admin.ModelAdmin):
     list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa')
-    fields = ('idintervencionclinica','integlosa','grpdescripcion')
-#    search_fields = ('integlosa',)
-#    filter_vertical = ('cienueve',)
+    #fields = ('idintervencionclinica','integlosa','grpdescripcion')
+    raw_id_fields = ('cienueve',)
     class Meta:
         ordering=['id']
-
 
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
@@ -26,7 +26,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
     titulos_cienueve.short_description = 'Titulos Cie-9'
     #list_display_links = ('titulos_proc','titulos_cienueve')
     #fields = ('titulos_proc','titulos_cienueve')
-    #search_fields = ('titulos_proc',)                          #No lo puedo hacer funcionar
+                              #No lo puedo hacer funcionar
     raw_id_fields = ('cienueve',)
     class Meta:
         ordering = ['cas_procedimiento_id','id']
