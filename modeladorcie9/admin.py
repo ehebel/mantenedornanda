@@ -27,6 +27,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
     #list_display_links = ('titulos_proc','titulos_cienueve')
     #fields = ('titulos_proc','titulos_cienueve')
     #search_fields = ('titulos_proc',)                          #No lo puedo hacer funcionar
+    raw_id_fields = ('cienueve',)
     class Meta:
         ordering = ['cas_procedimiento_id','id']
 
