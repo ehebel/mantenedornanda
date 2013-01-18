@@ -19,12 +19,16 @@ class cas_proc_descAdmin(admin.ModelAdmin):
 class relacionProcCieAdmin(admin.ModelAdmin):
     list_display = ('titulos_proc','titulos_cienueve')
     def titulos_proc(self, obj):
-        return '%s'%obj.cas_procedimiento.grpdescripcion
+        return '%s'%obj.cas_procedimiento.integlosa
     titulos_proc.short_description = 'Titulos Procedimientos'
     def titulos_cienueve(self, obj):
         return '%s'%obj.cienueve.descriptor
     titulos_cienueve.short_description = 'Titulos Cie-9'
     list_display_links = ('titulos_proc','titulos_cienueve')
+    fields = ('titulos_proc','titulos_cienueve')
+    search_fields = ('titulos_proc')
+    class Meta:
+        ordering = ['cas_procedimiento_id']
 
 
 admin.site.register(cas_concepto)
