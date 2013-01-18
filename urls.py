@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     # url(r'^mantenedornanda/', include('mantenedornanda.foo.urls')),
     (r'^$', views.lista_nandas),
     (r'^lista_nandas/(\d{1,4})/$',views.selec_nanda),
-    (r'^procedimentos/', modeladorcie9.views.list_cas_proc),
+    (r'^procedimientos/', modeladorcie9.views.list_cas_proc),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
