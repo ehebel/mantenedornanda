@@ -24,11 +24,11 @@ class relacionProcCieAdmin(admin.ModelAdmin):
     def titulos_cienueve(self, obj):
         return '%s'%obj.cienueve.descriptor
     titulos_cienueve.short_description = 'Titulos Cie-9'
-    list_display_links = ('titulos_proc','titulos_cienueve')
-    fields = ('titulos_proc','titulos_cienueve')
-    search_fields = ('titulos_proc')
+    #list_display_links = ('titulos_proc','titulos_cienueve')
+    #fields = ('titulos_proc','titulos_cienueve')
+    #search_fields = ('titulos_proc',)                          #No lo puedo hacer funcionar
     class Meta:
-        ordering = ['cas_procedimiento_id']
+        ordering = ['cas_procedimiento_id','id']
 
 
 admin.site.register(cas_concepto)
