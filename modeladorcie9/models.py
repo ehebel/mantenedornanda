@@ -71,7 +71,7 @@ class cienueve(models.Model):
     area = models.CharField(max_length=5)
     clasificacion = models.CharField(max_length=5)
     def __unicode__(self):
-        return self.codigo
+        return self.descriptor
     class Meta:
         ordering=['codigo']
 
