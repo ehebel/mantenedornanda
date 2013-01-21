@@ -14,7 +14,7 @@ class procedimientoAdmin(admin.ModelAdmin):
     raw_id_fields = ('cienueve',)
     list_filter = ('revisado',)
     class Meta:
-        ordering=['id']
+        ordering=['idintervencionclinica']
 
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
