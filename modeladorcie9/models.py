@@ -77,7 +77,7 @@ class cienueve(models.Model):
 
 
 class cas_procedimiento(models.Model):
-    idintervencionclinica = models.CharField(max_length=20)
+    idintervencionclinica = models.CharField(max_length=20, primary_key= True)
     integlosa = models.CharField(max_length=255)
     codgrupo = models.CharField(max_length=10)
     grpdescripcion = models.CharField(max_length=255)
@@ -89,7 +89,7 @@ class cas_procedimiento(models.Model):
     def __unicode__(self):
         return self.integlosa
     class Meta:
-        ordering=['id']
+        ordering=['idintervencionclinica']
 
 #tabla transitoria de descripciones de CAS procedimiento para tener sinonimo
 class cas_procedimiento_desc(models.Model):

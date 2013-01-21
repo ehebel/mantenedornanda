@@ -3,6 +3,11 @@ import os
 gettext = lambda s: s
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
