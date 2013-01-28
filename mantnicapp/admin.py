@@ -15,6 +15,7 @@ class NandaNicAdmin(admin.ModelAdmin):
     list_display_links = ('titulos_nanda','titulos_nic')
 
 
+
 admin.site.register(nic)
 admin.site.register(nicActividad)
 admin.site.register(nicCampo)
