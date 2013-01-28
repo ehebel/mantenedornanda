@@ -77,7 +77,7 @@ class cienueve(models.Model):
 
 
 class cas_procedimiento(models.Model):
-    idintervencionclinica = models.CharField(max_length=20, primary_key= True)
+    idintervencionclinica = models.CharField('ID CAS',max_length=20, primary_key= True)
     integlosa = models.CharField(max_length=255)
     codgrupo = models.CharField(max_length=10)
     grpdescripcion = models.CharField(max_length=255)
@@ -86,6 +86,8 @@ class cas_procedimiento(models.Model):
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
     revisado = models.BooleanField()
+    observaciones = models.CharField(max_length=255)
+    incodificable = models.BooleanField()
     def __unicode__(self):
         return self.integlosa
     class Meta:
