@@ -7,7 +7,7 @@
 <ul>
     {% for cas_procedimiento in listado_proc %}
     <h3>
-        <h3><a href="/admin/modeladorcie9/cas_procedimiento_cienueve/add/">{{ cas_procedimiento.id }}.- {{ cas_procedimiento.integlosa }}</a> </h3>
+        <h3><a href="/admin/modeladorcie9/cas_procedimiento_cienueve/add/">{{ cas_procedimiento.idintervencionclinica }}.- {{ cas_procedimiento.integlosa }}</a> </h3>
     </h3>
          {% for cienueve in cas_procedimiento.cienueve.all %}
         <li>{{ cienueve.descriptor }}
