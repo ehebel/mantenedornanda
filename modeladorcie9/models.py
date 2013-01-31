@@ -75,6 +75,16 @@ class cienueve(models.Model):
     class Meta:
         ordering=['codigo']
 
+class ciediez(models.Model):
+    codigo = models.CharField(max_length=10, primary_key=True)
+    descriptor = models.CharField(max_length=255)
+    capitulo_num = models.CharField(max_length=10)
+    capitulo_titulo = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.descriptor
+    class Meta:
+        ordering=['codigo']
+
 
 class cas_procedimiento(models.Model):
     idintervencionclinica = models.CharField('ID CAS',max_length=20, primary_key= True)
