@@ -76,10 +76,12 @@ class cienueve(models.Model):
         ordering=['codigo']
 
 class ciediez(models.Model):
-    codigo = models.CharField(max_length=10, primary_key=True)
+    codigo = models.CharField(max_length=10, primary_key=True) #Subcategoría
     descriptor = models.CharField(max_length=255)
     capitulo_num = models.CharField(max_length=10)
     capitulo_titulo = models.CharField(max_length=255)
+    grupo = models.CharField(max_length=255)
+    categoria = models.CharField(max_length=255)
     def __unicode__(self):
         return self.descriptor
     class Meta:
