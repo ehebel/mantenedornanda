@@ -76,7 +76,7 @@ class cienueve(models.Model):
         ordering=['codigo']
 
 class ciediez(models.Model):
-    codigo = models.CharField(max_length=10, primary_key=True) #Subcategoría
+    codigo = models.CharField(max_length=10, primary_key=True)
     descriptor = models.CharField(max_length=255)
     capitulo_num = models.CharField(max_length=10)
     capitulo_titulo = models.CharField(max_length=255)
