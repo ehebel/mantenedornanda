@@ -12,7 +12,7 @@ class procedimientoAdmin(admin.ModelAdmin):
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
     raw_id_fields = ('cienueve',)
-    list_filter = ('revisado',)
+    list_filter = ('revisado','grpdescripcion','sgrdescripcion')
     class Meta:
         ordering=['idintervencionclinica']
 
