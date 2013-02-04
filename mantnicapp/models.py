@@ -6,6 +6,9 @@ class nic(models.Model):
     titulo = models.CharField(max_length=100)
     definicion = models.TextField()
     edicion = models.CharField(max_length=40)
+    tituloabreviado = models.CharField("Titulo Abreviado",max_length=255, blank=True)
+    observacion = models.TextField('Observaciones', blank= True,)
+    revisado = models.BooleanField()
     nandas = models.ManyToManyField(nanda, through='relacionNandaNic')
     def __unicode__(self):
         return self.titulo
