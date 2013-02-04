@@ -23,7 +23,7 @@ class procedimientoAdmin(admin.ModelAdmin):
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
     raw_id_fields = ('cienueve',)
-    list_filter = ('revisado','grpdescripcion','sgrdescripcion')
+    list_filter = ('revisado','incodificable','grpdescripcion','sgrdescripcion')
     actions = [make_incodificable,make_revisado]
     def make_incodificable(self, request, queryset):
         queryset.update(incodificable='1')

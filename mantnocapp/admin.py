@@ -2,6 +2,10 @@ from django.contrib import admin
 from mantenedornanda.mantnocapp.models import prioridad, noc, nocClase, nocDominio, nocEscala, nocEspecialidad, nocIndicador, relacionNandaNoc, relacionNicNoc
 from mantenedornanda.mantnicapp.models import nic
 
+class NocAdmin(admin.ModelAdmin):
+    list_display = ('titulo','tituloabreviado','revisado')
+    list_filter = ('revisado')
+
 class NandaNocAdmin(admin.ModelAdmin):
     list_display = ('titulos_nanda','titulos_noc','prioridad_relacion')
     def titulos_nanda(self, obj):
@@ -29,7 +33,7 @@ class NicNocAdmin(admin.ModelAdmin):
     prioridad_relacion.short_description = 'Prioridad'
     list_display_links = ('titulos_nic','titulos_noc')
 
-admin.site.register(noc)
+admin.site.register(noc,NocAdmin)
 admin.site.register(nocClase)
 admin.site.register(nocDominio)
 admin.site.register(nocEscala)

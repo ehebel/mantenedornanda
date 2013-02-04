@@ -1,6 +1,10 @@
 from django.contrib import admin
 from mantenedornanda.mantnicapp.models import nic, nicActividad, nicCampo, nicClase, nicEspecialidad, relacionNandaNic
 
+class NicAdmin(admin.ModelAdmin):
+    list_display = ('titulo','tituloabreviado','revisado')
+    list_filter = ('revisado')
+
 class NandaNicAdmin(admin.ModelAdmin):
     list_display = ('titulos_nanda','titulos_nic','prioridad_relacion')
     def titulos_nanda(self, obj):
@@ -16,7 +20,7 @@ class NandaNicAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(nic)
+admin.site.register(nic,NicAdmin)
 admin.site.register(nicActividad)
 admin.site.register(nicCampo)
 admin.site.register(nicClase)
