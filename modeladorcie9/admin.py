@@ -1,20 +1,44 @@
 from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 
+admin.site.disable_action('delete_selected')
+
+def make_incodificable(modeladmin, request, queryset):
+     queryset.update(incodificable='1')
+make_incodificable.short_description = 'Marcar codigos seleccionados como incodificables.'
+
+def make_revisado(modeladmin, request, queryset):
+    queryset.update(revisado='1')
+make_revisado.short_description = 'Marcar codigos seleccionados como revisados.'
+
 class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
     search_fields = ('descriptor','codigo')
     list_filter = ('area','clasificacion')
 
 class procedimientoAdmin(admin.ModelAdmin):
-    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo','sgrdescripcion','inte_codigo_fonasa','revisado')
+    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo'
+                    ,'sgrdescripcion','inte_codigo_fonasa','revisado')
     readonly_fields = ('idintervencionclinica','integlosa','codgrupo'
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
     raw_id_fields = ('cienueve',)
     list_filter = ('revisado','grpdescripcion','sgrdescripcion')
+    actions = [make_incodificable,make_revisado]
+    def make_incodificable(self, request, queryset):
+        queryset.update(incodificable='1')
+    make_incodificable.short_description = 'Marcar codigos seleccionados como incodificables.'
+    def make_revisado(self, request, queryset):
+        rows_updated = queryset.update(revisado='1')
+        if rows_updated == 1:
+            message_bit = "Un codigo fue"
+        else:
+            message_bit = "%s codigos fueron" % rows_updated
+        self.message_user(request, "%s exitosamente revisado(s)." % message_bit)
+    make_revisado.short_description = "Marcar codigos seleccionados como revisados."
     class Meta:
         ordering=['idintervencionclinica']
+
 
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
