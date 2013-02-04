@@ -4,7 +4,7 @@ from mantenedornanda.mantnicapp.models import nic
 
 class NocAdmin(admin.ModelAdmin):
     list_display = ('titulo','tituloabreviado','revisado')
-    list_filter = ('revisado')
+    list_filter = ('revisado',)
 
 class NandaNocAdmin(admin.ModelAdmin):
     list_display = ('titulos_nanda','titulos_noc','prioridad_relacion')

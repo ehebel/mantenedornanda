@@ -3,7 +3,7 @@ from mantenedornanda.mantnicapp.models import nic, nicActividad, nicCampo, nicCl
 
 class NicAdmin(admin.ModelAdmin):
     list_display = ('titulo','tituloabreviado','revisado')
-    list_filter = ('revisado')
+    list_filter = ('revisado',)
 
 class NandaNicAdmin(admin.ModelAdmin):
     list_display = ('titulos_nanda','titulos_nic','prioridad_relacion')
