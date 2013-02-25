@@ -98,8 +98,9 @@ class cas_procedimiento(models.Model):
     inte_codigo_fonasa =  models.CharField(max_length=10)
     cienueve = models.ManyToManyField(cienueve)
     revisado = models.BooleanField()
-    observaciones = models.CharField(max_length=255)
+    observaciones = models.CharField(max_length=255, blank=True)
     incodificable = models.BooleanField()
+    consultar = models.BooleanField(default=False)
     def __unicode__(self):
         return self.integlosa
     class Meta:
