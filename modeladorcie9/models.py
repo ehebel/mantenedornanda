@@ -96,7 +96,7 @@ class cas_procedimiento(models.Model):
     codsubgrupo = models.CharField(max_length=10)
     sgrdescripcion = models.CharField(max_length=255)
     inte_codigo_fonasa =  models.CharField(max_length=10)
-    cienueve = models.ManyToManyField(cienueve)
+    cienueve = models.ManyToManyField(cienueve, blank=True)
     revisado = models.BooleanField()
     observaciones = models.CharField(max_length=255, blank=True)
     incodificable = models.BooleanField()
