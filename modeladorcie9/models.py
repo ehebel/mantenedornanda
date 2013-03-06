@@ -142,4 +142,4 @@ class cas_term_vtm_vmp(models.Model):
     def __unicode__(self):
         return self.vtm
     class Meta:
-        ordering=['id']
+        ordering=['descriptionid_vmp']
