@@ -141,5 +141,4 @@ class cas_term_vtm_vmp(models.Model):
     observacion = models.CharField(max_length=255)
     def __unicode__(self):
         return self.vtm
-    class Meta:
-        ordering=['descriptionid_vmp']
+
