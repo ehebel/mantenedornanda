@@ -126,3 +126,20 @@ class cas_procedimiento_desc(models.Model):
 class cas_procedimiento_cienueve(models.Model):
     cas_procedimiento_id = models.ForeignKey(cas_procedimiento)
     cienueve_id = models.ForeignKey(cienueve)
+
+
+class cas_term_vtm_vmp(models.Model):
+    descriptionid_vtm = models.BigIntegerField()
+    vtm = models.CharField(max_length=255)
+    descriptionid_vmp = models.BigIntegerField(primary_key=True)
+    vmp = models.CharField(max_length=255)
+    desconocido = models.BooleanField(default=False, blank=True)
+    revisado = models.BooleanField(default=False, blank=True)
+    arsenal = models.BooleanField(default=False, blank=True)
+    consultar = models.BooleanField(default=False, blank=True)
+    cambio_nombre = models.BooleanField(default=False, blank=True)
+    observacion = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.vtm
+    class Meta:
+        ordering=['id']
