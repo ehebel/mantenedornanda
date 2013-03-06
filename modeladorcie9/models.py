@@ -142,3 +142,32 @@ class cas_term_vtm_vmp(models.Model):
     def __unicode__(self):
         return self.vtm
 
+class cas_dbnet_productos(models.Model):
+    cod_clasificacion = models.IntegerField()
+    clasificacion = models.CharField(max_length=255)
+    codigo = models.CharField(max_length=10, primary_key=True)
+    producto = models.CharField(max_length=255)
+    receta_retenida = models.BooleanField(default=False, blank=True)
+    cod_principio_activo = models.ForeignKey(cas_dbnet_ppio_activo) #foreign key
+    #principio_activo = models.CharField(max_length=255)
+    cod_concentracion = models.CharField(max_length=10)
+    concentracion = models.CharField(max_length=255)
+    cod_acc_farmacologica = models.ForeignKey(cas_dbnet_ax_farmacol)
+    #accion_farmacologica = models.CharField(max_length=255)
+    cod_unidad = models.CharField(max_length=10)
+    unidad_medida = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.producto
+
+class cas_dbnet_ppio_activo(models.Model):
+    cod_principio_activo    = models.IntegerField(primary_key=True)
+    principio_activo        = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.principio_activo
+
+class cas_dbnet_ax_farmacol(models.Model):
+    cod_acc_farmacologica	= models.IntegerField(primary_key=True)
+    accion_farmacologica    = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.accion_farmacologica
+

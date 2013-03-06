@@ -64,6 +64,10 @@ admin.site.register(cas_mapdestino)
 admin.site.register(cas_mapeo)
 admin.site.register(ciediez)
 admin.site.register(cas_term_vtm_vmp)
+admin.site.register(cas_dbnet_productos)
+admin.site.register(cas_dbnet_ppio_activo)
+admin.site.register(cas_dbnet_ax_farmacol)
+
 
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
