@@ -129,9 +129,9 @@ class cas_procedimiento_cienueve(models.Model):
 
 
 class cas_term_vtm_vmp(models.Model):
-    descriptionid_vtm = models.BigIntegerField()
+    descriptionid_vtm = models.CharField(max_length=20)
     vtm = models.CharField(max_length=255)
-    descriptionid_vmp = models.BigIntegerField(primary_key=True)
+    descriptionid_vmp = models.CharField(max_length=20,primary_key=True)
     vmp = models.CharField(max_length=255)
     desconocido = models.BooleanField(default=False, blank=True)
     revisado = models.BooleanField(default=False, blank=True)
