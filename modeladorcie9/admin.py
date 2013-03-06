@@ -63,6 +63,7 @@ admin.site.register(cas_mapsalida)
 admin.site.register(cas_mapdestino)
 admin.site.register(cas_mapeo)
 admin.site.register(ciediez)
+admin.site.register(cas_term_vtm_vmp)
 
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
