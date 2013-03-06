@@ -162,11 +162,11 @@ class cas_dbnet_productos(models.Model):
     producto = models.CharField(max_length=255)
     receta_retenida = models.BooleanField(default=False, blank=True)
     cod_principio_activo = models.ForeignKey(cas_dbnet_ppio_activo) #foreign key
-    #principio_activo = models.CharField(max_length=255)
+    principio_activo = models.CharField(max_length=255)
     cod_concentracion = models.CharField(max_length=10)
     concentracion = models.CharField(max_length=255)
     cod_acc_farmacologica = models.ForeignKey(cas_dbnet_ax_farmacol)
-    #accion_farmacologica = models.CharField(max_length=255)
+    accion_farmacologica = models.CharField(max_length=255)
     cod_unidad = models.CharField(max_length=10)
     unidad_medida = models.CharField(max_length=255)
     def __unicode__(self):
