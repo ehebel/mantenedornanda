@@ -172,6 +172,24 @@ class cas_dbnet_producto(models.Model):
     def __unicode__(self):
         return self.producto
 
+class cas_kairos_producto(models.Model):
+    productos_clave	= models.IntegerField(primary_key=True)
+    productos_descripcion = models.CharField(max_length=255)
+    presentaciones_descripcion	= models.CharField(max_length=255)
+    clavepresentacion	= models.IntegerField()
+    concentracion	= models.CharField(max_length=40)
+    unidadconcentracion	= models.CharField(max_length=40)
+    especificacion	= models.CharField(max_length=255)
+    viaadministracion	= models.CharField(max_length=40)
+    medio = models.CharField(max_length=40)
+    cantidadenvase = models.IntegerField()
+    dosis = models.IntegerField()
+    cantidadunidad = models.IntegerField()
+    laboratorios_clave = models.IntegerField()
+    abreviatura = models.CharField(max_length=255)
+    laboratorios_descripcion = models.CharField(max_length=255)
+    ax_terapeut = models.ManyToManyField(ax_terapeut, through='cas_kairos_relacion_producto_ax')
+    sustancia =  models.ManyToManyField(sustancia, through='cas_kairos_relacion_producto_sustancia')
 
 class cas_kairos_ax_terapeut(models.Model):
     accionesterapeuticas_clave	= models.IntegerField(primary_key=True)
@@ -191,23 +209,6 @@ class cas_kairos_relacion_producto_sustancia(models.Model):
     sustancia_clave = models.ForeignKey(cas_kairos_sustancia)
     importancia = models.IntegerField()
 
-class cas_kairos_producto(models.Model):
-    productos_clave	= models.IntegerField(primary_key=True)
-    productos_descripcion = models.CharField(max_length=255)
-    presentaciones_descripcion	= models.CharField(max_length=255)
-    clavepresentacion	= models.IntegerField()
-    concentracion	= models.CharField(max_length=40)
-    unidadconcentracion	= models.CharField(max_length=40)
-    especificacion	= models.CharField(max_length=255)
-    viaadministracion	= models.CharField(max_length=40)
-    medio = models.CharField(max_length=40)
-    cantidadenvase = models.IntegerField()
-    dosis = models.IntegerField()
-    cantidadunidad = models.IntegerField()
-    laboratorios_clave = models.IntegerField()
-    abreviatura = models.CharField(max_length=255)
-    laboratorios_descripcion = models.CharField(max_length=255)
-    ax_terapeut = models.ManyToManyField(ax_terapeut, through='cas_kairos_relacion_producto_ax')
-    sustancia =  models.ManyToManyField(sustancia, through='cas_kairos_relacion_producto_sustancia')
+
 
 
