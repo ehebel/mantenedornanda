@@ -1,5 +1,6 @@
 from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
+from django.forms import Textarea, TextInput
 
 admin.site.disable_action('delete_selected')
 
@@ -55,6 +56,13 @@ class relacionProcCieAdmin(admin.ModelAdmin):
     class Meta:
         ordering = ['cas_procedimiento_id','id']
 
+class cas_termAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.CharField: {'widget': TextInput(attrs={'size':'60'})},
+        models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
+        }
+
+
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
@@ -63,8 +71,7 @@ admin.site.register(cas_mapsalida)
 admin.site.register(cas_mapdestino)
 admin.site.register(cas_mapeo)
 admin.site.register(ciediez)
-admin.site.register(cas_term_vtm_vmp)
-admin.site.register(cas_dbnet_productos)
+admin.site.register(cas_dbnet_producto)
 admin.site.register(cas_dbnet_ppio_activo)
 admin.site.register(cas_dbnet_ax_farmacol)
 
@@ -73,6 +80,7 @@ admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
 admin.site.register(cas_procedimiento_desc, cas_proc_descAdmin)
 admin.site.register(cas_procedimiento_cienueve, relacionProcCieAdmin)
+admin.site.register(cas_term_vtm_vmp, cas_termAdmin)
 
 
 __author__ = 'ehebel'
