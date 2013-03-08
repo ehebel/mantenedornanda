@@ -175,10 +175,14 @@ class cas_dbnet_producto(models.Model):
 class cas_kairos_ax_terapeut(models.Model):
     accionesterapeuticas_clave	= models.IntegerField(primary_key=True)
     accionesterapeuticas_descripcion = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.accionesterapeuticas_descripcion
 
 class cas_kairos_sustancia(models.Model):
     sustancia_clave = models.IntegerField(primary_key=True)
     sustancia_descripcion = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.sustancia_descripcion
 
 class cas_kairos_producto(models.Model):
     productos_clave	= models.IntegerField(primary_key=True)
@@ -198,7 +202,8 @@ class cas_kairos_producto(models.Model):
     laboratorios_descripcion = models.CharField(max_length=255)
     ax_terapeut = models.ManyToManyField(cas_kairos_ax_terapeut, through='cas_kairos_relacion_producto_ax')
     sustancia =  models.ManyToManyField(cas_kairos_sustancia, through='cas_kairos_relacion_producto_sustancia')
-
+    def __unicode__(self):
+        return self.productos_descripcion
 
 class cas_kairos_relacion_producto_ax(models.Model):
     producto_clave = models.ForeignKey(cas_kairos_producto)
