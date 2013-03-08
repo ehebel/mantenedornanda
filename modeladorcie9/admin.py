@@ -61,10 +61,9 @@ class cas_termAdmin(admin.ModelAdmin):
     list_filter = ('desconocido','revisado','arsenal','consultar')
     search_fields = ('vtm','vmp')
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':'60'})},
+        models.CharField: {'widget': TextInput(attrs={'size':'100'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
-
 
 
 admin.site.register(cas_concepto)

@@ -1,0 +1,1424 @@
+﻿Sustancias_Clave	Sustancias_Descripcion
+1	Xilitol
+7	Heparinoide
+16	Hexilresorcinol
+22	Hidroclorotiazida
+23	Zolpidem
+24	Tramadol
+25	Hidrocortisona
+29	Acebutolol
+30	Acarbosa
+32	Aceite de pescado
+34	Aceites esenciales
+35	Treonina
+42	Acetazolamida
+45	Acetilglutamina
+47	Acidos grasos esenciales
+48	Acetona
+52	Hidroquinona
+55	Acetilsalicílico ácido
+62	Aminoacético ácido
+65	Ascórbico ácido
+66	Benzoico ácido
+77	Cítrico ácido
+78	Hidroxipropilmetilcelulosa
+79	Dehidrocólico ácido
+81	Vitamina B12
+82	Docosahexaenoico ácido
+85	Hierro
+87	Eicosapentaenoico ácido
+91	Esteárico ácido
+93	Trospio cloruro
+95	Fusídico ácido
+97	Fólico ácido
+99	Histamina
+101	Glicólico ácido
+102	Glutámico ácido
+105	Linoleico ácido
+106	Láctico ácido
+107	Mefenámico ácido
+109	Vacuna antituberculosa
+112	Homatropina
+113	Nalidíxico ácido
+114	Hormona adrenocorticotrópica hipofisaria
+116	Hormona foliculoestimulante
+117	Oleico ácido
+122	Pipemídico ácido
+124	Gonadotropina menopáusica humana
+126	Hígado extracto
+128	Ibuprofeno
+131	Salicílico ácido
+134	Tartárico ácido
+139	Ifosfamida
+142	Imipramina
+144	Vacuna antisarampionosa
+145	Undecilénico ácido
+147	Indapamida
+149	Indometacina
+150	Ursodesoxicólico ácido
+151	Inmunoglobulina
+153	Desogestrel
+154	Valproico ácido
+155	Inositol
+158	Vigabatrín
+159	Acipimox
+160	Aciclovir
+161	Adifenina
+163	Adrenalina
+169	Yodo
+171	Alantoína
+172	Clioquinol
+173	Albendazol
+175	Albúmina humana
+182	Ipratropio bromuro
+183	Triclosán
+194	Alcanfor
+196	Bifidobacterium longum
+197	Isopropilo lanolato
+199	Eucaliptol
+205	Alcohol polivinílico
+210	Alfa tocoferol
+216	Nicotínico ácido
+218	Isosorbide 5-mononitrato
+219	Alopurinol
+221	Isosorbide dinitrato
+224	Aloe vera
+225	Isotretinoína
+226	Estramustina
+227	Aloína
+228	Acetilcarnitina
+229	Alprazolam
+230	Itraconazol
+233	Ketamina
+236	Ketazolam
+238	Ketoconazol
+241	Ketoprofeno
+245	Ketorolac
+246	Salmeterol + fluticasona
+247	Ketotifeno
+249	Aluminio estearato
+253	Lípidos
+254	Aluminio hidróxido
+262	Amantadina
+264	Ambroxol
+273	Amikacina
+275	Amfotericina B
+279	Amilorida
+288	Aminofilina
+289	Isoleucina
+293	Amiodarona
+296	Amisulprida
+298	Cefpodoxima
+299	Amitriptilina
+303	Lactosa
+304	Lactulosa
+306	Lanolina
+307	Ictamol
+309	Amonio lactato
+311	Amonio cloruro
+314	Amoxicilina
+317	Ampicilina
+325	Leucovorina cálcica
+334	Levobunolol
+335	Levoglutamina
+340	Octatropina
+346	Lidocaína
+350	Lincomicina
+353	Lindano
+355	Linestrenol
+358	Aspartamo
+362	Atapulgita
+364	Atenolol
+365	Atropina
+366	Lisina
+368	Lisina acetilsalicilato
+372	Lisinopril
+379	Litio carbonato
+386	Lomifilina
+389	Azufre
+390	Loperamida
+396	Loratadina
+398	Lorazepam
+401	Lormetazepam
+402	Lovastatín
+404	Magaldrato
+405	Magnesio
+412	Magnesio carbonato
+413	Magnesio citrato
+414	Magnesio cloruro
+420	Magnesio hidróxido
+424	Magnesio lactato
+427	Pemolina
+430	Magnesio sulfato
+431	Magnesio trisilicato
+433	Maltodextrina
+434	Manganeso
+435	Magnesio hipofosfito
+436	Manitol
+439	Mebendazol
+442	Medroxiprogesterona
+444	Megestrol
+447	Meglumina yoxagalato
+448	Meglumina yoxitalamato
+449	Mentol
+452	Mequitazina
+453	Mesna
+454	Mestranol
+468	Metildopa
+473	Metilo salicilato
+477	Metilprednisolona
+479	Metionina
+480	Metoclopramida
+484	Metolazona
+486	Metoprolol
+488	Metotrexato
+489	Metronidazol
+492	Mianserina
+493	Miconazol
+495	Midazolam
+497	Minerales
+498	Minociclina
+499	Minoxidil
+500	Misoprostol
+503	Mitomicina
+504	Mitoxantrona
+505	Moclobemida
+509	Morfina
+512	Tomillo esencia
+520	Nadolol
+522	Nafazolina
+525	Bacitracina
+531	Clofedianol
+536	Beclometasona
+537	Nandrolona
+538	Belladona
+542	Naproxeno
+552	Bencetonio cloruro
+553	Neomicina
+568	Nicergolina
+573	Nicotina
+574	Nicotinamida
+575	Cloro
+576	Nifedipina
+578	Benzalconio cloruro
+584	Nimodipina
+585	Nifurtimox
+588	Nimesulida
+594	Nistatina
+596	Benzocaína
+597	Nitrendipina
+598	Benzofenona
+599	Benzoílo peróxido
+600	Nitrofurantoína
+603	Nitrofurazona
+605	Nitroglicerina
+608	Alanina
+611	Nonoxinol
+614	Beta caroteno
+616	Betametasona
+619	Betametasona dipropionato
+624	Noretisterona
+627	Norfloxacina
+632	Bezafibrato
+633	Bifonazol
+635	Levonorgestrel
+639	Noscapina
+643	Biperideno
+646	Curcuma cedoaria
+649	Octilo salicilato
+650	Ofloxacina
+653	Omeprazol
+654	Vitamina A
+656	Orciprenalina
+660	Bisacodilo
+662	Bismuto subcitrato
+676	Oxazepam
+685	Bromazepam
+689	Bromelina
+692	Bromhexina
+697	Pamidronato disódico
+699	Ginseng
+701	Daunorrubicina
+704	Sulfametoxazol + trimetoprima
+705	Brotizolam
+709	Pancreatina
+712	Buflomedilo
+714	Papaverina
+715	Pantenol
+717	Pantoprazol
+718	Papaína
+720	Bupivacaína
+723	Buprenorfina
+731	Dexrazoxano
+734	Diaminoacridina
+735	Cafeína
+738	Calamina
+740	Paracetamol
+741	Calcio
+747	Pectina
+752	Penicilina G benzatínica
+753	Penicilina G procaínica
+756	Penicilina G sódica
+758	Calcio bromolactobionato
+760	Calcio carbonato
+761	Calcio citrato
+762	Calcio cloruro
+764	Calcio dobesilato
+769	Pentoxifilina
+771	Pepsina
+772	Peptona
+774	Permetrina
+777	Calcio fosfato
+778	Picosulfato sódico
+779	Didanosina
+783	Pilocarpina
+784	Calcio gluconato
+788	Pimozida
+790	Pinaverio bromuro
+791	Pantoténico ácido
+794	Calcitriol
+796	Pipenzolato bromuro
+797	Caolín
+798	Dimetilsulfóxido
+799	Captopril
+801	Carbamazepina
+802	Dopamina
+805	Piperonilo butóxido
+808	Pipotiazina
+809	Levodopa + carbidopa
+810	Carbinoxamina
+815	Carboplatino
+816	Piracetam
+818	Carboximetilcelulosa sódica
+822	Carbón activado
+829	Carmustina
+833	Caseína
+834	Cassia angustifolia Vahl.
+835	Piridostigmina bromuro
+836	Piridoxina
+843	Cefadroxilo
+845	Cefalexina
+850	Cefixima
+855	Cefradina
+856	Ceftazidima
+859	Cefuroxima
+862	Factor de protección solar (FPS)
+863	Centella asiática
+867	Cetirizina
+872	Cianocobalamina
+873	Ciclobenzaprina
+874	Ciclofosfamida
+876	Etamsilato
+878	Ciclopentolato
+880	Ciclopirox
+881	Ciclosporina
+884	Cilazapril
+885	Cimetidina
+887	Cinarizina
+889	Cinc
+891	Cinc piritiona
+894	Filoquinona
+898	Ciprofibrato
+899	Ciprofloxacina
+906	Ciproheptadina
+907	Ciproterona
+909	Cisapride
+910	Piritinol
+911	Cisplatino
+914	Citarabina
+919	Piroxicam
+920	Citrobioflavonoides
+923	Claritromicina
+930	Clidinio
+932	Clindamicina
+935	Clobazam
+938	Pluronic
+939	Plantago ovata Forsk
+940	Podofilina
+942	Clobetasol
+945	Polietilenglicol
+949	Polimixina B
+952	Clobutinol
+953	Polisorbato
+959	Clomifeno citrato
+960	Clomipramina
+961	Clonazepam
+962	Potasio
+963	Clonidina
+967	Cloranfenicol
+969	Hedera helix
+973	Potasio bicarbonato
+974	Clorazepato dipotásico
+975	Potasio bromuro
+977	Potasio cloruro
+978	Potasio gluconato
+980	Etilmorfina
+985	Povidona yodada
+988	Prasterona
+993	Prednisolona
+996	Clordiazepóxido
+998	Prednisona
+1002	Prilocaína
+1003	Primidona
+1006	Procaína
+1014	Clorhexidina
+1017	Clorobutanol
+1019	Clorocresol
+1027	Cloroxilenol
+1028	Clorpromazina
+1030	Clorpropamida
+1032	Clorzoxazona
+1033	Progesterona
+1039	Clotrimazol
+1040	Cloxacilina
+1041	Metoxaleno
+1042	Coáltar
+1044	Cobalto sulfato
+1045	Desonida
+1046	Cobre
+1049	Codeína
+1053	Colchicina
+1054	Colesterol
+1056	Colina
+1065	Inmunoglobulina anti-Rho(D)
+1066	Colágeno
+1075	Crataegus oxyacantha extracto
+1078	Cromoglicato disódico
+1079	Cynara scolymus L.
+1085	Cáscara sagrada extracto
+1090	Glucosamina
+1101	Dacarbazina
+1104	Kola extracto
+1107	Deanol
+1110	Decametrina
+1112	Levotiroxina sódica
+1116	Deflazacort
+1119	Liotironina
+1120	Desipramina
+1122	Desmopresina
+1123	Desogestrel + etinilestradiol
+1126	Desoxirribonucleasa
+1127	Dexametasona
+1128	Leuprolide acetato
+1136	Dexclorfeniramina
+1139	Dextrán
+1143	Dextrometorfano
+1145	Levomepromazina
+1146	Dextrosa
+1149	Diastasa
+1152	Diazepam
+1154	Dibucaína
+1157	Diciclomina
+1158	Diclofenac sódico
+1159	Diclofenac dietilamina
+1164	Diclofenac
+1166	Metiltestosterona
+1171	Dietilamina salicilato
+1172	Mirra
+1173	Difenhidramina
+1175	Difenilhidantoína
+1181	Nifuroxazida
+1184	Digoxina
+1187	Dihidroergocristina
+1196	Dihidroxiacetona
+1201	Diltiazem
+1203	Dimenhidrinato
+1209	Diosmina
+1210	Dipiridamol
+1217	Disulfiram
+1218	Proparacaína
+1221	Domperidona
+1223	Propericiazina
+1224	Propifenazona
+1225	Propilenglicol
+1226	Protamina
+1227	Propinoxato
+1229	Propofol
+1233	Proteínas
+1248	Ramipril
+1249	Ranitidina
+1256	Resorcina
+1259	Riboflavina
+1261	Rifampicina
+1263	Roxitromicina
+1265	Rutina
+1266	Finasteride
+1269	Sacarina sódica
+1271	Saccharomyces boulardii
+1272	Salbutamol
+1275	Sales biliares
+1284	Serenoa repens
+1289	Siliconas
+1290	Silimarina
+1291	Simeticona
+1292	Sodio
+1296	Sodio alginato
+1298	Sodio ascorbato
+1299	Sodio benzoato
+1300	Sodio bicarbonato
+1302	Sodio borato
+1305	Sodio citrato
+1306	Sodio cloruro
+1311	Sodio divalproato
+1314	Sodio fluoruro
+1320	Sodio yoduro
+1325	Sodio sulfato
+1326	Sodio laurilsulfato
+1329	Sodio hidróxido
+1330	Sodio perborato
+1333	Sodio propionato
+1334	Sodio salicilato
+1335	Sodio hipofosfito
+1339	Somatotropina
+1342	Sorbitol
+1343	Soja
+1345	Oxitocina
+1350	Sucralfato
+1351	Sulbactam
+1354	Sulfadiazina
+1358	Sulfatiazol
+1360	Sulfisoxazol
+1364	Sulpirida
+1365	Sultamicilina
+1370	Tamoxifeno
+1372	Taurina
+1376	Tenoxicam
+1377	Teofilina
+1384	Terpinol
+1387	Testosterona
+1394	Tetraciclina
+1404	Tiamina
+1411	Tiaprida
+1412	Tibolona
+1414	Tiomersal
+1416	Timol
+1417	Timolol
+1418	Tinidazol
+1422	Tioridazina
+1427	Titanio
+1428	Tizanidina
+1429	Tobramicina
+1432	Tolnaftato
+1435	Bálsamo de Tolú
+1437	Toxoide tetánico
+1443	Aminoácidos
+1445	Tretinoína
+1447	Triamcinolona
+1451	Triamtereno
+1452	Triazolam
+1453	Tribenósido
+1457	Salazosulfapiridina
+1458	Trietanolamina
+1465	Trihexifenidilo
+1467	Triamtereno + hidroclorotiazida
+1468	Trimebutina
+1469	Trimetazidina
+1476	Tropicamida
+1480	Urea
+1486	Vaselina
+1490	Verapamilo
+1494	Vincristina
+1497	Vinorelbine
+1504	Hidroxocobalamina
+1508	Vitamina D
+1514	Vitaminas
+1517	Xilometazolina
+1531	Zopiclona
+1533	Doxorrubicina
+1536	Droperidol
+1538	Fenilpropanolamina
+1543	Feniltoloxamina
+1545	Econazol
+1546	Edetato cálcico disódico
+1547	Efedrina
+1552	Elastina
+1556	Enalapril
+1558	Feniramina
+1560	Octilo metoxicinamato
+1565	Fenobarbital
+1567	Fenofibrato
+1569	Fenol
+1570	Ergocalciferol
+1574	Fenolftaleína
+1575	Ergotamina
+1576	Fenoterol
+1577	Eritromicina
+1582	Oxibutinina
+1583	Escina
+1584	Fenoximetilpenicilina
+1587	Hioscina butilbromuro
+1590	Paclitaxel
+1592	Espironolactona
+1595	Fenproporex
+1596	Fentanilo
+1600	Estradiol
+1605	Plasmina
+1607	Ruibarbo extracto
+1609	Flecainida
+1614	Fluconazol
+1617	Flumazenil
+1621	Flunarizina
+1625	Flunitrazepam
+1627	Fluocinolona
+1628	Fluocortolona
+1629	Selenio
+1630	Sertralina
+1634	Fluorometolona
+1636	Fluorouracilo
+1637	Fluoxetina
+1642	Estriol
+1644	Estrógenos conjugados
+1652	Flurbiprofeno
+1655	Flutamida
+1659	Etinilestradiol
+1663	Etofenamato
+1664	Etopósido
+1666	Polidocanol
+1672	Factor VIII
+1674	Famotidina
+1678	Flúor
+1681	Propilparabeno
+1683	Fenazopiridina
+1695	Fenilefrina
+1700	Fosfolípidos
+1706	Ftalilsulfacetamida
+1707	Ftalilsulfatiazol
+1710	Furazolidona
+1711	Furosemida
+1715	Fósforo
+1724	Ganciclovir
+1726	Gemfibrozil
+1727	Aluminio cloruro
+1728	Gentamicina
+1735	Ginkgo biloba
+1736	Médula ósea extracto
+1741	Glibenclamida
+1745	Glicerina
+1746	Gliclazida
+1751	Glipizida
+1753	Glucagón
+1754	Glucosa
+1755	Glucurolactona
+1760	Glúcidos
+1764	Gonadotropina coriónica humana
+1766	Goserelín
+1767	Gramicidina
+1768	Griseofulvina
+1773	Haloperidol
+1776	Hamamelis
+1778	Heparina
+1780	Zidovudina
+1781	Crotamitón
+1785	Dipirona
+1786	Tolbutamida
+1787	Quinapril
+1789	Aceite de germen de trigo
+1790	Aceite de ricino
+1791	Acenocumarol
+1801	Magnesio óxido
+1805	Manganeso sulfato
+1813	Melfalán
+1816	Menadiona
+1821	Meclofenámico ácido
+1827	Norgestimato + etinilestradiol
+1831	Flufenazina
+1837	Neostigmina
+1838	Acitretina
+1840	Buspirona
+1853	Tioguanina
+1854	Clorambucilo
+1857	Octreotida
+1859	Oxibenzona
+1862	Algas marinas extracto
+1863	Alprostadil
+1870	Penicilina G potásica
+1873	Pindolol
+1886	Asparagina
+1889	Azul de metileno
+1890	Praziquantel
+1892	Azatioprina
+1902	Complejo vitamínico B
+1906	Triptófano
+1915	Quinidina
+1918	Serrapeptasa
+1920	Simvastatín
+1923	Drosera
+1925	Carbocisteína
+1926	Carnitina
+1934	Cetilpiridinio
+1936	Fenoxetol
+1937	Fibras dietéticas
+1941	Inmunoglobulina antitetánica
+1943	Hialurónico ácido
+1946	Cloroquina
+1952	Cobre sulfato
+1954	Codergocrina mesilato
+1959	Terazosín
+1979	Levadura de cerveza
+1983	Meprobamato
+1989	Nadroparina cálcica
+1990	Dihexazín
+1994	Granisetrón
+1996	Doxiciclina
+2001	Mepiramina
+2002	Mesterolona
+2008	Metilfenidato
+2009	Metisoprinol
+2013	Midodrina
+2017	Mupirocina
+2018	Lactobacillus acidophilus
+2027	Vitis vinifera L.
+2029	Titanio dióxido
+2030	Hidralazina
+2033	Hidroxicina
+2034	Triglicéridos
+2038	Hierro quelato
+2041	Glucametacina
+2045	Homosalato
+2047	Nuez moscada
+2052	Piperacilina + tazobactam
+2057	Felodipino
+2060	Fenilbutazona
+2062	Seudoefedrina
+2065	Romero esencia
+2069	Fitomenadiona
+2070	Sacarosa
+2071	Flucloxacilina
+2074	Baclofeno
+2078	Bromocriptina
+2080	Propiltiouracilo
+2081	Mercaptopurina
+2083	Zuclopentixol
+2084	Clormezanona
+2086	Propafenona
+2087	Celiprolol
+2090	Potasio nitrato
+2092	Dantroleno sódico
+2093	Pirimetamina
+2110	Tietilperazina
+2111	Limón esencia
+2113	Mometasona
+2114	Atracurio
+2115	Ornitina
+2118	Tranexámico ácido
+2120	Labetalol
+2126	Irgasán
+2130	Trazodona
+2131	Tioconazol
+2136	Vitamina D3
+2137	Rosa mosqueta
+2138	Pramoxina
+2139	Fludrocortisona
+2142	Difenidol
+2143	Oximetazolina
+2144	Idarrubicina
+2151	Sodio acetato
+2153	Paraaminobenzoico ácido
+2158	Promolato
+2160	Betaxolol
+2161	Carvedilol
+2163	Tetrahidrozolina
+2165	Flavoxato
+2167	Dimeticona
+2171	Cefoperazona
+2178	Agua oxigenada
+2181	Epirrubicina
+2184	Aceites minerales
+2185	Metformina
+2192	Isopropilo palmitato
+2195	Busulfán
+2196	Sustancia ósea integral
+2201	Cartílago extracto
+2213	Ribavirina
+2217	Sulbutiamina
+2218	Mesalazina
+2219	Aceite de coco
+2222	Amlodipina
+2223	Salmeterol
+2225	Warfarina
+2233	Teicoplanina
+2234	Boldo
+2235	Aceite de almendras
+2236	Acetilcisteína
+2238	Calcio acetato
+2249	Agar
+2253	Alfa hidroxiácidos
+2254	Bleomicina
+2259	Calcio caseinato
+2260	Calcio hipofosfito
+2264	Calcio propionato
+2268	Amilo acetato
+2271	Celulosa
+2288	Araquidónico ácido
+2295	Ciclamato
+2298	Clavo esencia
+2308	Hierro sulfato
+2310	Biotina
+2316	Bórico ácido
+2317	Budesónida
+2325	Sulfacetamida
+2330	Calcitonina
+2343	Carbón vegetal
+2357	Filgrastim
+2359	Cisteína
+2361	Potasio citrato
+2365	Fucus vesiculosus L.
+2369	Isopropilo miristato
+2372	Hidroxiurea
+2382	Inmunoglobulina antihepatitis B
+2386	Inosina
+2387	Insulina
+2388	Interferón beta
+2391	Ipecacuana
+2399	Dantrón
+2414	Desoxiefedrina
+2416	Manteca de cacao
+2418	Marrubio
+2422	Desferroxamina
+2427	Oxcarbazepina
+2431	Metimazol
+2433	Yohimbina
+2442	Algestona + estradiol
+2451	Grindelia tintura
+2455	Oligoelementos
+2457	Eritropoyetina
+2459	Escalol 507
+2465	Clorfeniramina
+2477	Polioxietilénico éter
+2480	Eucalyptus globulus Labill
+2487	Potasio sorbato
+2491	Potasio sulfato
+2492	Sodio canfosulfonato
+2493	Propanolol
+2496	Potasio yoduro
+2503	Plantago psyllium
+2504	Fenilmercurio nitrato
+2508	Risperidona
+2509	Magnesio fosfato
+2512	Silicatos
+2522	Anfetamina sulfato
+2526	Acético ácido
+2534	Ondansetrón
+2539	Ceftriaxona
+2540	Prednicarbato
+2542	Benzoxonio cloruro
+2544	Perindopril
+2548	Alfacalcidol
+2549	Sodio glutamato
+2550	Gelatina
+2551	Sulfomucopolisacáridos
+2552	Clozapina
+2557	Oxolamina
+2560	Pravastatín
+2563	Citicolina
+2566	Ticlopidina
+2567	Azitromicina
+2569	Hierro proteinsuccinilato
+2570	Amorolfina
+2571	Paroxetina
+2578	Aceite de girasol
+2580	Aceite de hígado de bacalao
+2582	Aceite de hígado de tiburón
+2589	Aceite de soja
+2593	Aceites vegetales
+2603	Calcipotriol
+2607	Tricosacáridos
+2612	Sumatriptán
+2613	Terbinafina
+2617	Butilmetoxidibenzoilmetano
+2619	Hesperidina
+2621	Eugenol
+2623	Violeta de genciana
+2624	Selegilina
+2626	Fluticasona
+2631	Levodopa + benserazida
+2636	Alfuzosina
+2638	Capsaicina
+2642	Diacereína
+2655	Molibdeno
+2657	Malta extracto
+2662	Cromo
+2665	Valeriana officinalis L.
+2668	Calcio fluoruro
+2671	Sodio caseinato
+2673	Hematoporfirina clorhidrato
+2674	Suprarrenal extracto
+2677	Aceite de trementina
+2679	Alcohol isopropílico
+2680	Oxipolietoxidodecano
+2681	Clorocarvacrol
+2688	Fenazona
+2695	Arnica montana
+2697	Palto extracto
+2700	Miel
+2701	Hierbas medicinales
+2704	Canfeno
+2705	Borneol
+2706	Anetol
+2707	Fenchona
+2709	Aceite de oliva
+2712	Metilo antranilato
+2713	Sodio monofluorfosfato
+2714	Aluminio aminoacetato
+2720	Enoxaparina sódica
+2728	Doxazosín
+2732	Matico extracto
+2733	Thuja occidentalis
+2743	Mucoproteasa
+2744	Clopamida
+2746	GABA
+2748	Bromoformo
+2753	Hierro fosfato
+2760	Sulfaguanidina
+2761	Lobelia
+2764	Sodio molibdato
+2765	Níquel sulfato
+2767	Obidoxima cloruro
+2770	Triprolidina
+2771	Alcohol
+2772	Gabapentín
+2773	Canela
+2778	Calcio glicerofosfato
+2780	Antazolina
+2782	Orozuz extracto
+2783	Amonio citrato
+2792	Sotalol
+2797	Policarbófilo
+2798	Silicio
+2801	Sodio fosfato
+2802	Potasio fosfato
+2803	Fosfórico ácido
+2805	Doxilamina
+2811	Pamabrom
+2819	Sodio selenio
+2821	Eucerit
+2822	Carragenina
+2824	Cera de abeja
+2825	Aluminio hidroxicloruro
+2827	Ciclometicona
+2829	Bisabolol
+2830	Sodio lactato
+2833	Salicilato de glicol
+2834	Cápsico
+2835	Senna angustifolia
+2837	Passiflora incarnata L.
+2838	Melisa
+2839	Tilo extracto
+2847	Hidroxicloroquina
+2854	Equinácea
+2855	Helonias
+2856	Hydrastis canadensis L.
+2857	Sodio bromuro
+2859	Rhus toxicodendron
+2864	Grafito
+2865	GABOB
+2867	Semillas de linaza
+2875	Péptidos
+2885	Lactosuero
+2887	Phytolacca decandra
+2888	Milrinona
+2890	Pentaeritritilo
+2895	Lecitina
+2900	Thiroidinum
+2913	Nux vomica
+2914	Avena
+2915	Escholtzia californica
+2916	Manzanilla
+2917	Aesculus hippocastanum L.
+2931	Caléndula extracto
+2937	Bryonia alba
+2939	Foeniculum vulgare
+2953	Arginina
+2961	Uridina
+2970	Apomorfina
+2975	Lisina clonixinato
+2977	Lansoprazol
+2980	Carboxipolimetileno
+2983	Adenosina fosfato
+2984	Triptorelina
+2988	Aceite de pino
+2992	Flupentixol
+2993	Hidroxietil almidón
+2994	Sodio oleato
+2995	Policosanol
+2999	Citalopram
+3001	Alendronato
+3003	Dalteparina sódica
+3008	Stavudina
+3013	Amoxicilina + ácido clavulánico
+3017	Amoxicilina + sulbactam
+3020	Cobre gluconato
+3021	Hierro fumarato
+3027	Manganeso glicerofosfato
+3029	Dimecaína
+3032	Hidroxiprolisilano
+3038	Cabergolina
+3045	Oxaprozín
+3048	Mivacurio
+3057	Mefloquina
+3058	Meloxicam
+3060	Nizatidina
+3071	Docetaxel
+3076	Sodio hialuronato
+3078	Flores pectorales extracto
+3079	Humulus lupulus L.
+3080	Platero
+3081	Sambucus nigra
+3084	Blatta orientalis
+3085	Eupatorium perfoliatum
+3086	Aspidosperma
+3087	Urtica dioica L.
+3091	Cucurbita pepo L.
+3093	Conium maculatum L.
+3098	Alfalfa
+3099	Salvia extracto
+3115	Fosinopril
+3123	Epinastina
+3124	Losartán
+3127	Pergolida
+3132	Diritromicina
+3133	Levodropropizina
+3145	Nomegestrol
+3147	Boro
+3149	Indinavir
+3150	Azelastina
+3151	Yodoquinol
+3156	Piroctona
+3175	Vacuna antihepatitis A
+3176	Vacuna antihepatitis B
+3233	Ruscus aculeatus
+3241	Mirtazapina
+3242	Saquinavir
+3243	Formoterol
+3244	Latanoprost
+3245	Málico ácido
+3248	Glimepirida
+3249	Flutrimazol
+3250	Naltrexona
+3252	Lamivudina
+3253	Valaciclovir
+3254	Lamotrigina
+3258	Queratina
+3261	Irinotecán
+3265	Bicalutamida
+3266	Anastrozol
+3268	Iobitridol
+3270	Atorvastatina
+3273	Micofenolato mofetilo
+3275	Dorzolamida
+3276	Tamsulosina
+3277	Valsartán
+3281	Tirosina
+3282	Meglumina gadoterato
+3283	Permetol
+3427	Irbesartán
+3428	Abciximab
+3470	Betahistina
+3490	Cefepima
+3494	Ceramidas
+3507	Clormadinona
+3512	Cobalto
+3526	Cromo cloruro
+3580	Fluvoxamina
+3586	Gemcitabina
+3600	Hierro polimaltosato
+3601	Hipérico extracto
+3613	Lenograstim
+3619	Meropenem
+3621	Metano
+3638	Pirofosfato tetrasódico
+3640	Poliacrílico ácido
+3652	Provitamina B5
+3659	Sertaconazol nitrato
+3667	Superóxido dismutasa
+3668	Talidomida
+3674	Ubiquinona
+3676	Vacuna antimeningocócica
+3677	Valina
+3678	Venlafaxina
+3686	Butano
+3688	Memantina
+3692	Equisetum arvense L.
+3699	Ciruela
+3711	Oligosacáridos
+3713	Retinaldehído
+3714	Talco
+3718	Bencila cinamato
+3740	Achicoria extracto
+3787	Illicium verum Hooker
+3791	Lavandula angustifolia
+3823	Potasio permanganato
+3835	Silice
+3861	Zingiber officinale
+3882	Riluzol
+3887	Topiramato
+3894	Prolina
+3895	Serina
+3900	Oxaliplatino
+3905	Hierro sacarato
+3908	Cilostazol
+3911	Topotecán
+3912	Brimonidina
+3913	Cisatracurio
+3914	Adapaleno
+3915	Olanzapina
+3916	Tacrolimús
+3923	Trometamol
+3931	Tazaroteno
+3953	Tuberculina
+3977	Glicirricínico ácido
+3980	Didrogesterona
+3983	Enzimas pancreáticas
+3984	Erdosteína
+3986	Etinilestradiol + gestodeno
+3990	Fexofenadina
+4015	Ringer-lactato
+4016	Rituximab
+4021	Vacuna antigripal
+4022	Vacuna antirrábica
+4024	Vacuna contra la fiebre amarilla
+4029	Levofloxacino
+4031	Propóleo
+4048	Acamprosato
+4049	Montelukast
+4050	Mebeverina
+4054	Orlistat
+4055	Rivastigmina
+4056	Sildenafil
+4057	Tacalcitol
+4058	Raloxifeno
+4061	Naratriptán
+4062	Ivermectina
+4063	Letrozol
+4065	Olopatadina
+4066	Bisoprolol
+4069	Silybum marianum L.
+4075	Donepecilo
+4076	Ropinirol
+4077	Oxicodona
+4078	Remifentanilo
+4081	Tolterodina
+4082	Clopidogrel
+4085	Hilano
+4086	Candesartán cilexetil
+4088	Citidina
+4094	Amonio glicolato
+4105	Arctostaphylos uva-ursi L.
+4107	Basiliximab
+4113	Chitosan
+4119	Escherichia coli extracto
+4127	Iloprost
+4128	Imiquimod
+4135	Melilotus officinalis L.
+4139	Pramipexol
+4140	Quetiapina
+4143	Rizatriptán
+4157	Aceite de linaza
+4166	Povidona
+4167	Celecoxib
+4168	Leflunomida
+4169	Tirofibán
+4174	Brinzolamida
+4176	Rabeprazol
+4193	Capecitabina
+4199	Hioscina butilbromuro + dipirona
+4201	Oseltamivir
+4202	Abacavir
+4203	Bupropión
+4206	Efavirenz
+4207	Entacapona
+4209	Etanercept
+4213	Racecadotril
+4214	Reboxetina
+4215	Repaglinida
+4217	Telmisartán
+4218	Temozolomida
+4219	Trastuzumab
+4236	Climbazol
+4240	Creatina
+4251	Electrolitos parenterales
+4264	Gatifloxacina
+4271	Kójico ácido
+4280	Metilsilanol manuronato
+4299	Rosiglitazona
+4301	Silanoles
+4312	Vitamina B8
+4313	Vitex agnus-castus L.
+4342	Tepescohuite
+4345	Calcio hidróxido
+4346	Potasio hidróxido
+4349	Uncaria tomentosa
+4354	Exemestano
+4356	Infliximab
+4357	Milnaciprán
+4359	Moxifloxacina
+4373	Limeciclina
+4375	Zaleplón
+4376	Sirolimús
+4377	Zanamivir
+4380	Loteprednol
+4386	Pioglitazona
+4389	Gluconolactona
+4394	Risedronato
+4396	Levetiracetam
+4398	Salvado de avena
+4411	Calcio tioglicolato
+4415	Modafinilo
+4416	Galantamina
+4419	Linezolid
+4423	Diclofenac colestiramina
+4439	Fosfolípidos de huevo
+4478	Enoxolona
+4492	Zea mays L.
+4505	Mentona
+4516	Trolamina
+4520	Guanosina
+4535	BGM
+4550	Ilex paraguariensis St. Hill
+4569	Nicometanol
+4573	Borraja
+4582	Lactasa
+4600	Aspártico ácido
+4635	Octocrileno
+4636	Sucralosa
+4659	Condroitinsulfato
+4682	Arbutina
+4683	Copolímero acrilato
+4685	Germen de trigo
+4686	Manteca de karité
+4702	Glicocólico ácido
+4707	Alfa-linolénico ácido
+4713	Miranol
+4714	Nateglinida
+4729	Vacuna antineumocócica conjugada
+4731	Imipenem + cilastatina
+4732	Levonorgestrel + etinilestradiol
+4752	Estrógenos esterificados
+4762	Stevia rebaudiana Bertoni
+4789	Insulina humana
+4792	Interferón alfa (2b)
+4815	Zoledrónico ácido
+4818	Polyquad
+4822	Esomeprazol
+4826	Tegaserod
+4827	Ibandrónico ácido
+4828	Travoprost
+4831	Desloratadina
+4832	Bimatoprost
+4833	Bemiparina
+4842	Nebivolol
+4850	Imatinib
+4852	Dexketoprofeno
+4932	Caspofungina acetato
+4935	Ziprasidona
+4947	Adenosina
+4956	Polietilenglicol 3350
+4962	Vacuna contra Haemophilus influenzae B (Hib)
+4971	Etanol
+4977	Vacuna contra la varicela
+4987	Globulina antitimocitos
+4997	Bexaroteno
+5018	Pipetanato
+5023	Estrógenos conjugados naturales
+5030	Ganirélix
+5031	Eletriptán
+5032	Etoricoxib
+5036	Etonogestrel
+5067	Inmunoglobulina humana normal
+5085	Tiotropio bromuro
+5086	Drotrecogin alfa (activado)
+5088	Ezetimibe
+5090	Levosulpirida
+5091	Cimicifuga racemosa Nutt
+5092	Parecoxib
+5093	Aceite de aguacate
+5094	Escitalopram
+5095	Ertapenem
+5099	Vacuna antihepatitis A + B
+5100	Vacuna antineumocócica
+5103	Vacuna antipoliomielitis
+5104	Vacuna antirrubéola
+5105	Vacuna antitífica
+5113	Vacuna séxtuple
+5114	Vacuna triple (DPT)
+5115	Vacuna triple acelular
+5117	Vac. c/infecc. otorrinol. y broncopulmonares
+5127	Trimegestona
+5128	Drospirenona + etinilestradiol
+5132	Agua termal
+5161	Rosuvastatina
+5180	Copolímero vinílico
+5216	Mandioca
+5270	Thea sinensis
+5281	Vardenafil
+5282	Insulina glargina
+5283	Aprepitant
+5285	Atomoxetina
+5286	Enfuvirtida
+5287	Fondaparinux sódico
+5290	Tadalafilo
+5291	Teriparatida
+5292	Voriconazol
+5294	Aripiprazol
+5300	Pimecrolimús
+5301	Bifidobacterium bifidum
+5304	Valganciclovir
+5308	Atazanavir
+5315	Phaseolus vulgaris
+5316	Tenofovir disoproxil fumarato
+5318	Adefovir dipivoxilo
+5319	Dutasterida
+5320	Agua de mar
+5412	Fulvestrant
+5414	Pemetrexed
+5431	Micofenólico ácido
+5436	Bevacizumab
+5437	Gefitinib
+5438	Fosamprenavir cálcico
+5469	Bortezomib
+5470	Cetuximab
+5476	Duloxetina
+5480	Drospirenona + estradiol
+5483	Norelgestromina + etinilestradiol
+5484	Levocetirizina
+5485	Everolimús
+5486	Olmesartán medoximil
+5487	Clotiazepam
+5493	Pregabalina
+5494	Coriogonadotropina alfa
+5496	Licopeno
+5499	Licor amonio anís
+5500	Especies pectorales extracto fluido
+5569	Cetrorelix
+5572	Atosiban
+5686	Luteína
+5688	Ciclesonida
+5693	Lactobacillus casei
+5892	Miglustat
+5894	Daptomicina
+5895	Frovatriptán
+5896	Emtricitabina
+5904	Exenatida
+5905	Entecavir
+5906	Omalizumab
+5908	Azacitidina
+5911	Cefdinir
+5916	Tigeciclina
+5929	Nepafenac
+5931	Vacuna contra rotavirus
+5932	Electrolitos
+5933	Copolímero metilvinil éter
+5934	Extramel
+5942	Soja isoflavones
+6004	Anidulafungina
+6005	Bivalirudina
+6006	Bosentano
+6008	Erlotinib
+6018	Vareniclina
+6020	Eflornitina
+6021	Pegfilgrastim
+6027	Deferasirox
+6028	Eptacog alfa (activado)
+6029	Shiitake extracto de
+6030	Darunavir
+6031	Dasatinib
+6034	Decitabina
+6035	Eszopiclona
+6039	Sorafenib
+6040	Sunitinib
+6041	Treprostinil sódico
+6042	Rasagilina
+6043	Palonosetrón
+6045	Lenalidomida
+6047	Abatacept
+6048	Ivabradina
+6068	Probióticos
+6069	Factor recombinante humano
+6072	Acetil hexapéptido-3
+6074	Concentrado de cerebrolysin
+6076	Trichogen
+6077	5-alfa-avocuta
+6078	Boswellia
+6079	Fitoesteroles
+6080	Sitagliptina
+6089	Lapatinib
+6091	Aliskiren
+6100	Temsirolimús
+6103	Dextrina de trigo
+6104	Retapamulina
+6106	Ranibizumab
+6107	Estroncio ranelato
+6113	Cafeisilano
+6114	Vacuna tetravalente
+6120	Metilo aminolevulinato
+6121	Lactobacillus plantarum
+6123	Zeaxantina
+6125	Linoleico ácido conjugado
+6126	Curcuma longa
+6127	Aminolevulínico ácido
+6128	Insulina análoga
+6130	Selenio disulfuro
+6131	Pelargonium sidoides extracto
+6137	Armodafinilo
+6138	Etravirina
+6139	Ixabepilona
+6149	Maraviroc
+6151	Vildagliptina
+6153	Nilotinib
+6154	Raltegravir
+6155	Trabectedina
+6157	Atovacuona
+6161	Dabigatrán etexilato
+6166	Glycine max
+6167	Lactobacillus reuteri
+6170	Tinosorb M
+6171	Tinosorb S
+6172	Complejos bicarbonatados
+6173	Nitrógeno como propelente
+6174	Azahar
+6176	Folitropina alfa
+6177	Symphytum officinale L.
+6180	Rivaroxabán
+6181	Metoxipolietilenglicol-epoetina beta
+6182	Hierro sacarosa
+6183	Vacuna antivirus papiloma humano
+6184	Insulina glulisina
+6185	Aceite de nuez de coco nucifera
+6191	Agomelatina
+6192	Tocilizumab
+6193	Proguanilo
+6194	Menotropina altamente purificada
+6217	Dienogest
+6218	Polifenoles de uva
+6219	Desvenlafaxina
+6225	Carbetocina
+6236	Ustekinumab
+6257	Cranberry extracto
+6264	Saxagliptina
+6266	Flavonoides
+6267	Asiático ácido
+6275	Amarillo de mercurio óxido
+6277	Siloxano
+6294	Pazopanib
+6297	Eltrombopag
+6313	Lacosamida
+6336	Drospirenona
+6340	Astaxantina
+6341	Antileukina-6
+6342	Losartán potásico
+6343	Bioecolia
+6347	Undecilenato ácido
+6348	Cuasia amara
+6349	Indacaterol
+6357	Palta
+6361	Peginterferón alfa-2a
+6362	Etifoxina
+6366	Triglicérido caprílico
+6369	Proteína de suero
+6370	Acidos grasos poliinsaturados de cadena larga
+6371	Proteína de suero y TCM hidrolizado
+6372	Lactobacillus rhamnosus
+6373	Pinus pinaster
+6387	Laropiprant
+6388	Prebióticos
+6389	Fingolimod
