@@ -74,7 +74,11 @@ admin.site.register(ciediez)
 admin.site.register(cas_dbnet_producto)
 admin.site.register(cas_dbnet_ppio_activo)
 admin.site.register(cas_dbnet_ax_farmacol)
-
+admin.site.register(cas_kairos_producto)
+admin.site.register(cas_kairos_ax_terapeut)
+admin.site.register(cas_kairos_sustancia)
+admin.site.register(cas_kairos_relacion_producto_ax)
+admin.site.register(cas_kairos_relacion_producto_sustancia)
 
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
