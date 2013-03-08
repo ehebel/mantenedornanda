@@ -57,6 +57,9 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         ordering = ['cas_procedimiento_id','id']
 
 class cas_termAdmin(admin.ModelAdmin):
+    list_display = ('descriptionid_vtm','vtm','descriptionid_vmp','vmp','revisado')
+    list_filter = ('desconocido','revisado','arsenal','consultar')
+    search_fields = ('vtm','vmp')
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'60'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
