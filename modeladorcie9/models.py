@@ -196,8 +196,8 @@ class cas_kairos_producto(models.Model):
     laboratorios_clave = models.IntegerField()
     abreviatura = models.CharField(max_length=255)
     laboratorios_descripcion = models.CharField(max_length=255)
-    ax_terapeut = models.ManyToManyField(ax_terapeut, through='cas_kairos_relacion_producto_ax')
-    sustancia =  models.ManyToManyField(sustancia, through='cas_kairos_relacion_producto_sustancia')
+    ax_terapeut = models.ManyToManyField(cas_kairos_ax_terapeut, through='cas_kairos_relacion_producto_ax')
+    sustancia =  models.ManyToManyField(cas_kairos_sustancia, through='cas_kairos_relacion_producto_sustancia')
 
 
 class cas_kairos_relacion_producto_ax(models.Model):
