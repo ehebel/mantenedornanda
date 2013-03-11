@@ -91,7 +91,7 @@ admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
 admin.site.register(cas_procedimiento_desc, cas_proc_descAdmin)
 admin.site.register(cas_procedimiento_cienueve, relacionProcCieAdmin)
-admin.site.register(cas_dbnet_producto)
+admin.site.register(cas_dbnet_producto,dbnetprodAdmin)
 admin.site.register(cas_term_vtm_vmp, cas_termAdmin)
 
 
