@@ -57,13 +57,18 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         ordering = ['cas_procedimiento_id','id']
 
 class cas_termAdmin(admin.ModelAdmin):
-    list_display = ('descriptionid_vtm','vtm','descriptionid_vmp','vmp','revisado')
-    list_filter = ('desconocido','revisado','arsenal','consultar')
+    list_display = ('descriptionid_vtm','vtm','descriptionid_vmp','vmp','arsenal','revisado')
+    list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre')
     search_fields = ('vtm','vmp')
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'100'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
+
+class dbnetprodAdmin(admin.ModelAdmin):
+    list_display = ('codigo','producto','cod_principio_activo','principio_activo')
+    #list_filter = ('revisado','consultar')
+    search_fields = ('producto','cod_principio_activo')
 
 
 admin.site.register(cas_concepto)
@@ -86,6 +91,7 @@ admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
 admin.site.register(cas_procedimiento_desc, cas_proc_descAdmin)
 admin.site.register(cas_procedimiento_cienueve, relacionProcCieAdmin)
+admin.site.register(cas_dbnet_producto,dbnetprodAdmin)
 admin.site.register(cas_term_vtm_vmp, cas_termAdmin)
 
 
