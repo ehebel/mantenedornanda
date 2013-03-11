@@ -68,7 +68,7 @@ class cas_termAdmin(admin.ModelAdmin):
 class dbnetprodAdmin(admin.ModelAdmin):
     list_display = ('codigo','producto','cod_principio_activo','principio_activo')
     #list_filter = ('revisado','consultar')
-    search_fields = ('producto')
+    search_fields = ('producto',)
 
 
 admin.site.register(cas_concepto)
