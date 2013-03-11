@@ -2,7 +2,7 @@ from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 from django.forms import Textarea, TextInput
 
-admin.site.disable_action('delete_selected')
+#admin.site.disable_action('delete_selected')
 
 def make_incodificable(modeladmin, request, queryset):
      queryset.update(incodificable='1')
