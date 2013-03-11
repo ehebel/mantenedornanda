@@ -2,7 +2,7 @@ from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 from django.forms import Textarea, TextInput
 
-#admin.site.disable_action('delete_selected')
+admin.site.disable_action('delete_selected')
 
 def make_incodificable(modeladmin, request, queryset):
      queryset.update(incodificable='1')
@@ -19,12 +19,12 @@ class cienueveAdmin(admin.ModelAdmin):
 
 class procedimientoAdmin(admin.ModelAdmin):
     list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo'
-                    ,'sgrdescripcion','inte_codigo_fonasa','revisado')
+                    ,'sgrdescripcion','inte_codigo_fonasa','revisado','consultar')
     readonly_fields = ('idintervencionclinica','integlosa','codgrupo'
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
     raw_id_fields = ('cienueve',)
-    list_filter = ('revisado','incodificable','incodificable','grpdescripcion','sgrdescripcion')
+    list_filter = ('revisado','incodificable','consultar','grpdescripcion','sgrdescripcion')
     actions = [make_incodificable,make_revisado]
     def make_incodificable(self, request, queryset):
         queryset.update(incodificable='1')
@@ -37,6 +37,45 @@ class procedimientoAdmin(admin.ModelAdmin):
             message_bit = "%s codigos fueron" % rows_updated
         self.message_user(request, "%s exitosamente revisado(s)." % message_bit)
     make_revisado.short_description = "Marcar codigos seleccionados como revisados."
+    def add_view(self, request, *args, **kwargs):
+        result = super(procedimientoAdmin, self).add_view(request, *args, **kwargs )
+        #"""
+        #Delete the session key, since we want the user to be directed to all listings
+        #after a save on a new object.
+        #"""
+        request.session['filtered'] =  None
+
+        return result
+        #"""
+        #Used to redirect users back to their filtered list of locations if there were any
+        #"""
+    def change_view(self, request, object_id, extra_context={}):
+        """
+        save the referer of the page to return to the filtered
+        change_list after saving the page
+        """
+        result = super(procedimientoAdmin, self).change_view(request, object_id, extra_context )
+
+        # Look at the referer for a query string '^.*\?.*$'
+        ref = request.META.get('HTTP_REFERER', '')
+        if ref.find('?') != -1:
+            # We've got a query string, set the session value
+            request.session['filtered'] =  ref
+
+        if request.POST.has_key('_save'):
+            #"""
+            #We only kick into action if we've saved and if
+            #there is a session key of 'filtered', then we
+            #delete the key.
+            #"""
+            try:
+                if request.session['filtered'] is not None:
+                    result['Location'] = request.session['filtered']
+                    request.session['filtered'] = None
+            except:
+                pass
+        return result
+
     class Meta:
         ordering=['idintervencionclinica']
 
@@ -95,3 +134,4 @@ admin.site.register(cas_term_vtm_vmp, cas_termAdmin)
 
 
 __author__ = 'ehebel'
+
