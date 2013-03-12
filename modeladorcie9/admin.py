@@ -39,35 +39,15 @@ class procedimientoAdmin(admin.ModelAdmin):
     make_revisado.short_description = "Marcar codigos seleccionados como revisados."
     def add_view(self, request, *args, **kwargs):
         result = super(procedimientoAdmin, self).add_view(request, *args, **kwargs )
-        #"""
-        #Delete the session key, since we want the user to be directed to all listings
-        #after a save on a new object.
-        #"""
         request.session['filtered'] =  None
-
         return result
-        #"""
-        #Used to redirect users back to their filtered list of locations if there were any
-        #"""
     def change_view(self, request, object_id, extra_context={}):
-        """
-        save the referer of the page to return to the filtered
-        change_list after saving the page
-        """
         result = super(procedimientoAdmin, self).change_view(request, object_id, extra_context )
-
-        # Look at the referer for a query string '^.*\?.*$'
         ref = request.META.get('HTTP_REFERER', '')
         if ref.find('?') != -1:
-            # We've got a query string, set the session value
             request.session['filtered'] =  ref
 
         if request.POST.has_key('_save'):
-            #"""
-            #We only kick into action if we've saved and if
-            #there is a session key of 'filtered', then we
-            #delete the key.
-            #"""
             try:
                 if request.session['filtered'] is not None:
                     result['Location'] = request.session['filtered']
@@ -75,10 +55,8 @@ class procedimientoAdmin(admin.ModelAdmin):
             except:
                 pass
         return result
-
     class Meta:
         ordering=['idintervencionclinica']
-
 
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
@@ -96,9 +74,27 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         ordering = ['cas_procedimiento_id','id']
 
 class cas_termAdmin(admin.ModelAdmin):
-    list_display = ('descriptionid_vtm','vtm','descriptionid_vmp','vmp','arsenal','revisado')
+    list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
     list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre')
-    search_fields = ('vtm','vmp')
+    search_fields = ('vtm',)
+    filter_horizontal = ('dbnet','kairos')
+    def add_view(self, request, *args, **kwargs):
+        result = super(cas_termAdmin, self).add_view(request, *args, **kwargs )
+        request.session['filtered'] =  None
+        return result
+    def change_view(self, request, object_id, extra_context={}):
+        result = super(cas_termAdmin, self).change_view(request, object_id, extra_context )
+        ref = request.META.get('HTTP_REFERER', '')
+        if ref.find('?') != -1:
+            request.session['filtered'] =  ref
+        if request.POST.has_key('_save'):
+            try:
+                if request.session['filtered'] is not None:
+                    result['Location'] = request.session['filtered']
+                    request.session['filtered'] = None
+            except:
+                pass
+        return result
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'100'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
@@ -109,6 +105,8 @@ class dbnetprodAdmin(admin.ModelAdmin):
     #list_filter = ('revisado','consultar')
     search_fields = ('producto',)
 
+class kairosproductosAdmin(admin.ModelAdmin):
+    raw_id_fields = ('ax_terapeut',)
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
@@ -119,7 +117,7 @@ admin.site.register(cas_mapeo)
 admin.site.register(ciediez)
 admin.site.register(cas_dbnet_ppio_activo)
 admin.site.register(cas_dbnet_ax_farmacol)
-admin.site.register(cas_kairos_producto)
+admin.site.register(cas_kairos_producto,kairosproductosAdmin)
 admin.site.register(cas_kairos_ax_terapeut)
 admin.site.register(cas_kairos_sustancia)
 admin.site.register(cas_kairos_relacion_producto_ax)

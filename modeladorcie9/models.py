@@ -128,21 +128,6 @@ class cas_procedimiento_cienueve(models.Model):
     cienueve_id = models.ForeignKey(cienueve)
 
 
-class cas_term_vtm_vmp(models.Model):
-    descriptionid_vtm = models.CharField(max_length=20)
-    vtm = models.CharField(max_length=255)
-    descriptionid_vmp = models.CharField(max_length=20,primary_key=True)
-    vmp = models.CharField(max_length=255)
-    desconocido = models.BooleanField(default=False, blank=True)
-    revisado = models.BooleanField(default=False, blank=True)
-    arsenal = models.BooleanField(default=False, blank=True)
-    consultar = models.BooleanField(default=False, blank=True)
-    cambio_nombre = models.BooleanField(default=False, blank=True)
-    observacion = models.CharField(max_length=255)
-    def __unicode__(self):
-        return self.vtm
-
-
 class cas_dbnet_ppio_activo(models.Model):
     cod_principio_activo    = models.IntegerField(primary_key=True)
     principio_activo        = models.CharField(max_length=255)
@@ -205,9 +190,25 @@ class cas_kairos_producto(models.Model):
     def __unicode__(self):
         return self.productos_descripcion
 
+class cas_term_vtm_vmp(models.Model):
+    descriptionid_vtm = models.CharField(max_length=20)
+    vtm = models.CharField(max_length=255)
+    descriptionid_vmp = models.CharField(max_length=20,primary_key=True)
+    vmp = models.CharField(max_length=255)
+    desconocido = models.BooleanField(default=False, blank=True)
+    revisado = models.BooleanField(default=False, blank=True)
+    arsenal = models.BooleanField(default=False, blank=True)
+    consultar = models.BooleanField(default=False, blank=True)
+    cambio_nombre = models.BooleanField(default=False, blank=True)
+    observacion = models.CharField(max_length=255, blank=True)
+    dbnet = models.ManyToManyField(cas_dbnet_producto, blank=True)
+    kairos = models.ManyToManyField(cas_kairos_producto, blank=True)
+    def __unicode__(self):
+        return self.vtm
+
 class cas_kairos_relacion_producto_ax(models.Model):
     producto_clave = models.ForeignKey(cas_kairos_producto)
-    accionesterapeuticas_clave = models.ForeignKey(cas_kairos_ax_terapeut)
+    accionesterapeuticas_clave = models.ForeignKey(cas_kairos_ax_terapeut, unique=True)
     importancia = models.IntegerField()
 
 class cas_kairos_relacion_producto_sustancia(models.Model):
