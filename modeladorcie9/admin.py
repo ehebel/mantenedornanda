@@ -76,7 +76,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
 class cas_termAdmin(admin.ModelAdmin):
     list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
     list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre')
-    readonly_fields = ('descriptionid_vmp','vmp','descriptionid_vtm', 'vmp')
+    readonly_fields = ('descriptionid_vmp','vmp','descriptionid_vtm', 'vtm')
     search_fields = ('vtm',)
     filter_horizontal = ('dbnet','kairos')
     def add_view(self, request, *args, **kwargs):

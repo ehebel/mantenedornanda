@@ -189,7 +189,10 @@ class cas_kairos_producto(models.Model):
     ax_terapeut = models.ManyToManyField(cas_kairos_ax_terapeut, through='cas_kairos_relacion_producto_ax')
     sustancia =  models.ManyToManyField(cas_kairos_sustancia, through='cas_kairos_relacion_producto_sustancia')
     def __unicode__(self):
-        return "%s | %s" % (self.productos_clave, self.productos_descripcion)
+        return "%s | %s %s" % (
+                self.productos_clave
+                , self.productos_descripcion
+                , self.presentaciones_descripcion)
 
 class cas_term_vtm_vmp(models.Model):
     descriptionid_vtm = models.CharField(max_length=20)
