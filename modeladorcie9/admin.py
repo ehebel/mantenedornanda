@@ -100,6 +100,7 @@ class cas_termAdmin(admin.ModelAdmin):
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
 
+
 class dbnetprodAdmin(admin.ModelAdmin):
     list_display = ('codigo','producto','cod_principio_activo','principio_activo')
     #list_filter = ('revisado','consultar')

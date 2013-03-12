@@ -155,7 +155,7 @@ class cas_dbnet_producto(models.Model):
     cod_unidad = models.CharField(max_length=10)
     unidad_medida = models.CharField(max_length=255)
     def __unicode__(self):
-        return self.producto
+        return "%s | %s" % (self.codigo, self.producto)
 
 class cas_kairos_ax_terapeut(models.Model):
     accionesterapeuticas_clave	= models.IntegerField(primary_key=True)
@@ -188,7 +188,7 @@ class cas_kairos_producto(models.Model):
     ax_terapeut = models.ManyToManyField(cas_kairos_ax_terapeut, through='cas_kairos_relacion_producto_ax')
     sustancia =  models.ManyToManyField(cas_kairos_sustancia, through='cas_kairos_relacion_producto_sustancia')
     def __unicode__(self):
-        return self.productos_descripcion
+        return "%s | %s" % (self.productos_clave, self.productos_descripcion)
 
 class cas_term_vtm_vmp(models.Model):
     descriptionid_vtm = models.CharField(max_length=20)
