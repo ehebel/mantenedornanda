@@ -170,6 +170,7 @@ class cas_kairos_sustancia(models.Model):
         return self.sustancia_descripcion
 
 class cas_kairos_producto(models.Model):
+    idkairos = models.IntegerField(primary_key=True)
     productos_clave	= models.IntegerField()
     productos_descripcion = models.CharField(max_length=255)
     presentaciones_descripcion	= models.CharField(max_length=255)
