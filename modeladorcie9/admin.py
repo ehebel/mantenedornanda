@@ -79,6 +79,11 @@ class cas_termAdmin(admin.ModelAdmin):
     readonly_fields = ('descriptionid_vmp','vmp','descriptionid_vtm', 'vtm')
     search_fields = ('vtm',)
     filter_horizontal = ('dbnet','kairos')
+    fieldsets = (
+        (None, {
+            'fields': ('descriptionid_vmp', 'vmp','dbnet','kairos', 'revisado', 'arsenal','consultar','desconocido','cambio_nombre','observacion')
+        }),
+        )
     def add_view(self, request, *args, **kwargs):
         result = super(cas_termAdmin, self).add_view(request, *args, **kwargs )
         request.session['filtered'] =  None
