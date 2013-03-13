@@ -74,14 +74,14 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         ordering = ['cas_procedimiento_id','id']
 
 class cas_termAdmin(admin.ModelAdmin):
-    list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
+    list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar','dbnet')
     list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','vtm')
     readonly_fields = ('descriptionid_vmp','vmp','descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
     fieldsets = (
         (None, {
-            'fields': ('descriptionid_vmp', 'vmp', 'revisado', 'arsenal','consultar','desconocido'
+            'fields': ('vtm','descriptionid_vmp', 'vmp', 'revisado', 'arsenal','consultar','desconocido'
                        ,'cambio_nombre','observacion','dbnet','kairos')
         }),
         )
