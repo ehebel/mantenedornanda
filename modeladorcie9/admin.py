@@ -110,6 +110,7 @@ class cas_termAdmin(admin.ModelAdmin):
 
 class dbnetprodAdmin(admin.ModelAdmin):
     list_display = ('codigo','producto','cod_principio_activo','cod_acc_farmacologica')
+    list_filter = ('cod_principio_activo','cod_acc_farmacologica')
     search_fields = ('producto',)
 
 
