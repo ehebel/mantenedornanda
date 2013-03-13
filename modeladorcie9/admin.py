@@ -109,12 +109,15 @@ class cas_termAdmin(admin.ModelAdmin):
 
 
 class dbnetprodAdmin(admin.ModelAdmin):
-    list_display = ('codigo','producto','cod_principio_activo','principio_activo')
-    #list_filter = ('revisado','consultar')
+    list_display = ('codigo','producto','cod_principio_activo','cod_acc_farmacologica')
     search_fields = ('producto',)
 
+
 class kairosproductosAdmin(admin.ModelAdmin):
-    raw_id_fields = ('ax_terapeut',)
+    list_display = ('productos_descripcion','concentracion','unidadconcentracion','medio','cantidadenvase','abreviatura')
+    list_filter = ('medio','abreviatura')
+    search_fields = ('productos_descripcion','abreviatura','laboratorios_descripcion')
+
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
