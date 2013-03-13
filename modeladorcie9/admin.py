@@ -74,7 +74,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         ordering = ['cas_procedimiento_id','id']
 
 class cas_termAdmin(admin.ModelAdmin):
-    list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar','dbnet')
+    list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
     list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','vtm')
     readonly_fields = ('descriptionid_vmp','vmp','descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
