@@ -73,6 +73,7 @@ class cienueve(models.Model):
     def __unicode__(self):
         return "%s | %s" % (self.codigo, self.descriptor)
 
+
 class ciediez(models.Model):
     codigo = models.CharField(max_length=10, primary_key=True)
     descriptor = models.CharField(max_length=255)
@@ -94,7 +95,8 @@ class cas_procedimiento(models.Model):
     codsubgrupo = models.CharField(max_length=10)
     sgrdescripcion = models.CharField(max_length=255)
     inte_codigo_fonasa =  models.CharField(max_length=10)
-    cienueve = models.ManyToManyField(cienueve, blank=True)
+    #cienueve = models.ManyToManyField(cienueve, blank=True)
+    cienueve = models.ManyToManyField(cienueve, blank=True, limit_choices_to = {'area':'P'})
     revisado = models.BooleanField()
     observaciones = models.CharField(max_length=255, blank=True)
     incodificable = models.BooleanField()
