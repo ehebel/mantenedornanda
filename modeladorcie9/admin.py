@@ -80,6 +80,7 @@ class cas_termAdmin(admin.ModelAdmin):
     readonly_fields = ('descriptionid_vmp','descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
+    list_display_links = ('vmp')
     fieldsets = (
         (None, {
             'fields': ('vtm','descriptionid_vmp', 'vmp', 'revisado', 'arsenal','consultar','desconocido'
