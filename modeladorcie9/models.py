@@ -204,6 +204,7 @@ class cas_term_vtm_vmp(models.Model):
     arsenal = models.BooleanField(default=False, blank=True)
     consultar = models.BooleanField(default=False, blank=True)
     cambio_nombre = models.BooleanField(default=False, blank=True)
+    no_en_kairos = models.BooleanField(default=False, blank=True)
     observacion = models.CharField(max_length=255, blank=True)
     dbnet = models.ManyToManyField(cas_dbnet_producto, blank=True)
     kairos = models.ManyToManyField(cas_kairos_producto, blank=True)
