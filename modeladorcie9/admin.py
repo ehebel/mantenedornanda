@@ -77,7 +77,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
 class cas_termAdmin(admin.ModelAdmin):
     list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
     list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','no_en_kairos','vtm')
-    readonly_fields = ('descriptionid_vmp','descriptionid_vtm', 'vtm')
+    readonly_fields = ('descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
     list_display_links = ('vmp',)
