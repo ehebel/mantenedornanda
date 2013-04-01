@@ -2,7 +2,14 @@ from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 from django.forms import Textarea, TextInput
 
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
+
 admin.site.disable_action('delete_selected')
+
+class MyUserAdmin(UserAdmin):
+    list_filter = UserAdmin.list_filter + ('groups__name',)
+
 
 def make_incodificable(modeladmin, request, queryset):
      queryset.update(incodificable='1')
@@ -122,6 +129,9 @@ class kairosproductosAdmin(admin.ModelAdmin):
     search_fields = ('productos_descripcion','abreviatura','laboratorios_descripcion')
 
 
+
+
+
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
 admin.site.register(cas_conj_mapeo)
@@ -136,6 +146,9 @@ admin.site.register(cas_kairos_sustancia)
 admin.site.register(cas_kairos_relacion_producto_ax)
 admin.site.register(cas_kairos_relacion_producto_sustancia)
 
+
+admin.site.unregister(User)
+admin.site.register(User, MyUserAdmin)
 admin.site.register(cienueve, cienueveAdmin)
 admin.site.register(cas_procedimiento,procedimientoAdmin)
 admin.site.register(cas_procedimiento_desc, cas_proc_descAdmin)

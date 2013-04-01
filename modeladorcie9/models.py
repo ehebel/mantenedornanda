@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+
 # Create your models here.
 class cas_concepto(models.Model):
     idconcepto = models.BigIntegerField()
@@ -95,7 +97,6 @@ class cas_procedimiento(models.Model):
     codsubgrupo = models.CharField(max_length=10)
     sgrdescripcion = models.CharField(max_length=255)
     inte_codigo_fonasa =  models.CharField(max_length=10)
-    #cienueve = models.ManyToManyField(cienueve, blank=True)
     cienueve = models.ManyToManyField(cienueve, blank=True, limit_choices_to = {'area':'P'})
     revisado = models.BooleanField()
     observaciones = models.CharField(max_length=255, blank=True)
