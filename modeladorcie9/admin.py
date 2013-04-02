@@ -83,7 +83,9 @@ class relacionProcCieAdmin(admin.ModelAdmin):
 
 class cas_termAdmin(admin.ModelAdmin):
     list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
-    list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','no_en_kairos','vtm')
+    list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','no_en_kairos'
+                  #,'castermvtm__vtm'
+        )
     readonly_fields = ('descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
@@ -91,7 +93,9 @@ class cas_termAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': ('vtm','descriptionid_vmp', 'vmp', 'revisado', 'arsenal','consultar','desconocido'
-                       ,'cambio_nombre','no_en_kairos','observacion','dbnet','kairos')
+                       ,'cambio_nombre','no_en_kairos','observacion','dbnet','kairos'
+                #       ,'descriptionid_vtm'
+                )
         }),
         )
     def add_view(self, request, *args, **kwargs):
@@ -127,9 +131,6 @@ class kairosproductosAdmin(admin.ModelAdmin):
     list_display = ('productos_descripcion','concentracion','unidadconcentracion','medio','cantidadenvase','abreviatura')
     list_filter = ('medio','abreviatura')
     search_fields = ('productos_descripcion','abreviatura','laboratorios_descripcion')
-
-
-
 
 
 admin.site.register(cas_concepto)

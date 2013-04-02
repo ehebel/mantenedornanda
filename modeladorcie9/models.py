@@ -195,8 +195,18 @@ class cas_kairos_producto(models.Model):
                 , self.productos_descripcion
                 , self.presentaciones_descripcion)
 
+class cas_term_vtm(models.Model):
+    descriptionid_vtm = models.CharField(max_length=20, primary_key=True)
+    vtm = models.CharField(max_length=255)
+    CuentaDeVMP = models.IntegerField(max_length=6)
+    CuentaAcumulado = models.IntegerField(max_length=6)
+    grupo_vtm = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.vtm
+
+
 class cas_term_vtm_vmp(models.Model):
-    descriptionid_vtm = models.CharField(max_length=20)
+    descriptionid_vtm = models.ForeignKey(cas_term_vtm)
     vtm = models.CharField(max_length=255)
     descriptionid_vmp = models.CharField(max_length=20,primary_key=True, null=False, blank=False)
     vmp = models.CharField(max_length=255, blank=False)
@@ -209,8 +219,10 @@ class cas_term_vtm_vmp(models.Model):
     observacion = models.CharField(max_length=255, blank=True)
     dbnet = models.ManyToManyField(cas_dbnet_producto, blank=True)
     kairos = models.ManyToManyField(cas_kairos_producto, blank=True)
+    grupo_vtm = models.CharField(max_length=255)
     def __unicode__(self):
         return self.vtm
+
 
 class cas_kairos_relacion_producto_ax(models.Model):
     producto_clave = models.ForeignKey(cas_kairos_producto)
