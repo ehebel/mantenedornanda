@@ -206,7 +206,7 @@ class cas_term_vtm(models.Model):
 
 
 class cas_term_vtm_vmp(models.Model):
-    descriptionid_vtm = models.ForeignKey(cas_term_vtm)
+    descriptionid_vtm = models.CharField(max_length=255)
     vtm = models.CharField(max_length=255)
     descriptionid_vmp = models.CharField(max_length=20,primary_key=True, null=False, blank=False)
     vmp = models.CharField(max_length=255, blank=False)
