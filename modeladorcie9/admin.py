@@ -83,9 +83,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
 
 class cas_termAdmin(admin.ModelAdmin):
     list_display = ('descriptionid_vmp','vmp','arsenal','revisado','consultar')
-    list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','no_en_kairos'
-                  #,'castermvtm__vtm'
-        )
+    list_filter = ('revisado','arsenal','consultar','desconocido','cambio_nombre','no_en_kairos','grupo_vtm')
     readonly_fields = ('descriptionid_vtm', 'vtm')
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
@@ -146,6 +144,7 @@ admin.site.register(cas_kairos_ax_terapeut)
 admin.site.register(cas_kairos_sustancia)
 admin.site.register(cas_kairos_relacion_producto_ax)
 admin.site.register(cas_kairos_relacion_producto_sustancia)
+admin.site.register(cas_term_vtm)
 
 
 admin.site.unregister(User)
