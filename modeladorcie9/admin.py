@@ -30,8 +30,8 @@ class procedimientoAdmin(admin.ModelAdmin):
     readonly_fields = ('idintervencionclinica','integlosa','codgrupo'
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
+    search_fields = ('integlosa','grpdescripcion','sgrdescripcion')
     filter_vertical = ('cienueve',)
-    #raw_id_fields = ('cienueve',)
     list_filter = ('revisado','incodificable','consultar','grpdescripcion','sgrdescripcion')
     actions = [make_incodificable,make_revisado]
     def make_incodificable(self, request, queryset):
