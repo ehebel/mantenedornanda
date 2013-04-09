@@ -1,7 +1,9 @@
+import csv
+from django.http import HttpResponse
+from django.core.exceptions import PermissionDenied
 from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 from django.forms import Textarea, TextInput
-
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
@@ -10,7 +12,6 @@ admin.site.disable_action('delete_selected')
 class MyUserAdmin(UserAdmin):
     list_filter = UserAdmin.list_filter + ('groups__name',)
 
-
 def make_incodificable(modeladmin, request, queryset):
      queryset.update(incodificable='1')
 make_incodificable.short_description = 'Marcar codigos seleccionados como incodificables.'
@@ -18,6 +19,27 @@ make_incodificable.short_description = 'Marcar codigos seleccionados como incodi
 def make_revisado(modeladmin, request, queryset):
     queryset.update(revisado='1')
 make_revisado.short_description = 'Marcar codigos seleccionados como revisados.'
+
+
+def export_as_csv(modeladmin, request, queryset):
+    """
+    Generic csv export admin action.
+    """
+    if not request.user.is_staff:
+        raise PermissionDenied
+    opts = modeladmin.model._meta
+    response = HttpResponse(mimetype='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=%s.csv' % unicode(opts).replace('.', '_')
+    writer = csv.writer(response, delimiter=';')
+    field_names = [field.name for field in opts.fields]
+    # Write a first row with header information
+    writer.writerow(field_names)
+    # Write data rows
+    for obj in queryset:
+        writer.writerow([getattr(obj, field) for field in field_names])
+    return response
+export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
+
 
 class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
@@ -33,7 +55,7 @@ class procedimientoAdmin(admin.ModelAdmin):
     search_fields = ('integlosa','grpdescripcion','sgrdescripcion')
     filter_vertical = ('cienueve',)
     list_filter = ('revisado','incodificable','consultar','grpdescripcion','sgrdescripcion')
-    actions = [make_incodificable,make_revisado]
+    actions = [make_incodificable,make_revisado, export_as_csv]
     def make_incodificable(self, request, queryset):
         queryset.update(incodificable='1')
     make_incodificable.short_description = 'Marcar codigos seleccionados como incodificables.'
@@ -88,6 +110,7 @@ class cas_termAdmin(admin.ModelAdmin):
     search_fields = ('vtm','vmp')
     filter_vertical = ('dbnet','kairos')
     list_display_links = ('vmp',)
+    actions = [export_as_csv]
     fieldsets = (
         (None, {
             'fields': ('vtm','descriptionid_vmp', 'vmp', 'revisado', 'arsenal','consultar','desconocido'

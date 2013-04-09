@@ -12,7 +12,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('Esteban Hebel', 'ehebel@alemana.cl'),
 )
 
 MANAGERS = ADMINS
@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'mantenedornanda.mantnicapp',
     'mantenedornanda.mantnocapp',
     'mantenedornanda.modeladorcie9',
+    'mantenedornanda.modeladorconcepto'
 )
 
 # A sample logging configuration. The only tangible logging

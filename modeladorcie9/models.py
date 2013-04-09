@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-
 # Create your models here.
 class cas_concepto(models.Model):
     idconcepto = models.BigIntegerField()
@@ -233,7 +232,3 @@ class cas_kairos_relacion_producto_sustancia(models.Model):
     producto_clave = models.ForeignKey(cas_kairos_producto)
     sustancia_clave = models.ForeignKey(cas_kairos_sustancia)
     importancia = models.IntegerField()
-
-
-
-
