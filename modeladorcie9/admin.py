@@ -36,7 +36,18 @@ def export_as_csv(modeladmin, request, queryset):
     writer.writerow(field_names)
     # Write data rows
     for obj in queryset:
-        writer.writerow([getattr(obj, field) for field in field_names])
+        values = []
+        for field in field_names:
+                value = (getattr(obj, field))
+                if callable(value):
+                    try:
+                        value = value() or ''
+                    except:
+                        value = 'Error al recuperar valor'
+                if value is None:
+                    value = ''
+                values.append(unicode(value).encode('utf-8'))
+        writer.writerow(values)
     return response
 export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
