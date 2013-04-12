@@ -107,7 +107,7 @@ class cas_proc_descAdmin(admin.ModelAdmin):
 
 
 class relacionProcCieAdmin(admin.ModelAdmin):
-    list_display = ('titulos_proc','titulos_cienueve')
+    list_display = ('cas_procedimiento_id','titulos_proc','cienueve_id','titulos_cienueve')
     def titulos_proc(self, obj):
         return '%s'%obj.cas_procedimiento.integlosa
     titulos_proc.short_description = 'Titulos Procedimientos'
