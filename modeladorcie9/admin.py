@@ -56,6 +56,8 @@ class cienueveAdmin(admin.ModelAdmin):
     list_display = ('codigo','descriptor','area')
     search_fields = ('descriptor','codigo')
     list_filter = ('area','clasificacion')
+    actions = [export_as_csv]
+
 
 class procedimientoAdmin(admin.ModelAdmin):
     list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo'
@@ -101,6 +103,8 @@ class procedimientoAdmin(admin.ModelAdmin):
 
 class cas_proc_descAdmin(admin.ModelAdmin):
     list_display = ('termino','idconcepto','tipodescripcion')
+    actions = [export_as_csv]
+
 
 class relacionProcCieAdmin(admin.ModelAdmin):
     list_display = ('titulos_proc','titulos_cienueve')
@@ -111,6 +115,7 @@ class relacionProcCieAdmin(admin.ModelAdmin):
         return '%s'%obj.cienueve.descriptor
     titulos_cienueve.short_description = 'Titulos Cie-9'
     raw_id_fields = ('cienueve',)
+    actions = [export_as_csv]
     class Meta:
         ordering = ['cas_procedimiento_id','id']
 
@@ -157,12 +162,16 @@ class dbnetprodAdmin(admin.ModelAdmin):
     list_display = ('codigo','producto','cod_principio_activo','cod_acc_farmacologica')
     list_filter = ('cod_principio_activo','cod_acc_farmacologica')
     search_fields = ('producto',)
+    actions = [export_as_csv]
+
 
 
 class kairosproductosAdmin(admin.ModelAdmin):
     list_display = ('productos_descripcion','concentracion','unidadconcentracion','medio','cantidadenvase','abreviatura')
     list_filter = ('medio','abreviatura')
     search_fields = ('productos_descripcion','abreviatura','laboratorios_descripcion')
+    actions = [export_as_csv]
+
 
 
 admin.site.register(cas_concepto)
@@ -193,4 +202,3 @@ admin.site.register(cas_term_vtm_vmp, cas_termAdmin)
 
 
 __author__ = 'ehebel'
-
