@@ -7,7 +7,7 @@ from django.forms import Textarea, TextInput
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-admin.site.disable_action('delete_selected')
+#admin.site.disable_action('delete_selected')
 
 class MyUserAdmin(UserAdmin):
     list_filter = UserAdmin.list_filter + ('groups__name',)
@@ -107,7 +107,7 @@ class cas_proc_descAdmin(admin.ModelAdmin):
 
 
 class relacionProcCieAdmin(admin.ModelAdmin):
-    list_display = ('cas_procedimiento_id','titulos_proc','cienueve_id','titulos_cienueve')
+    list_display = ('titulos_proc','titulos_cienueve')
     def titulos_proc(self, obj):
         return '%s'%obj.cas_procedimiento.integlosa
     titulos_proc.short_description = 'Titulos Procedimientos'
