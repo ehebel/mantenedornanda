@@ -12,6 +12,11 @@ class radiologico(models.Model):
     QDoc_GroupedExams = models.CharField(max_length=255)
     QDoc_DateInactive = models.DateTimeField(blank=True, null=True)
     Origin_File = models.CharField(max_length=255)
+    revisado = models.BooleanField()
+    consultar = models.BooleanField()
+    no_pedible = models.BooleanField()
+    ambiguo = models.BooleanField()
+    observacion = models.CharField(max_length=255, blank=True)
     def __unicode__(self):
         return self.QDoc_ExamName
     class Meta:

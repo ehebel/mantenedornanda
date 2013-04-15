@@ -22,6 +22,7 @@ DATABASES = {
 #Produccion
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ehebel$mantnandadb',                      # Or path to database file if using sqlite3.
+
 #Desarrollo
 #        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 #        'NAME': os.path.join(PROJECT_PATH, 'modeladorCASdb'),                      # Or path to database file if using sqlite3.

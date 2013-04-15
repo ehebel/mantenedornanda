@@ -1,6 +1,7 @@
 import csv
 from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
+from django.contrib.admin.util import label_for_field
 from django.contrib import admin
 from mantenedornanda.modeladorcie9.models import *
 from django.forms import Textarea, TextInput
@@ -50,6 +51,102 @@ def export_as_csv(modeladmin, request, queryset):
         writer.writerow(values)
     return response
 export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
+
+def export_as_csv_action(description="Exportar a CSV",fields=None, exclude=None ,header=True):
+    """
+    This function returns an export csv action
+    This function ONLY downloads the columns shown in the list_display of the admin
+    'header' is whether or not to output the column names as the first row
+    """
+    def exporta_a_csv(modeladmin, request, queryset):
+        """
+        Generic csv export admin action.
+        based on http://djangosnippets.org/snippets/1697/ and /2020/
+        """
+        if not request.user.is_staff:
+            raise PermissionDenied
+        opts = modeladmin.model._meta
+        field_names = modeladmin.list_display
+        if 'action_checkbox' in field_names:
+            field_names.remove('action_checkbox')
+#        field_names = set([field.name for field in opts.fields])
+#        if fields:
+#            fieldset = set(fields)
+#            field_names = field_names & fieldset
+#        elif exclude:
+#            excludeset = set(exclude)
+#            field_names = field_names - excludeset
+
+        response = HttpResponse(mimetype='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=%s.csv' % unicode(opts).replace('.', '_')
+
+        writer = csv.writer(response, delimiter=';')
+        if header:
+            headers = []
+            for field_name in list(field_names):
+                label = label_for_field(field_name,modeladmin.model,modeladmin)
+                if str.islower(label):
+                    label = str.title(label)
+                headers.append(label)
+            writer.writerow(headers)
+        for row in queryset:
+            values = []
+            for field in field_names:
+                value = (getattr(row, field))
+                if callable(value):
+                    try:
+                        value = value() or ''
+                    except:
+                        value = 'Error retrieving value'
+                if value is None:
+                    value = ''
+                values.append(unicode(value).encode('utf-8'))
+            writer.writerow(values)
+        return response
+
+    exporta_a_csv.short_description = description
+    return exporta_a_csv
+
+#def export_as_csv_action(description="Export selected objects as CSV file",
+#                         fields=None, exclude=None, header=True):
+#    """
+#    This function returns an export csv action
+#    'fields' and 'exclude' work like in django ModelForm
+#    'header' is whether or not to output the column names as the first row
+#    """
+#    def export_as_csv2(modeladmin, request, queryset):
+#        """
+#        Generic csv export admin action.
+#        based on http://djangosnippets.org/snippets/1697/
+#        """
+#        if not request.user.is_staff:
+#            raise PermissionDenied
+#        opts = modeladmin.model._meta
+#        response = HttpResponse(mimetype='text/csv')
+#        response['Content-Disposition'] = 'attachment; filename=%s.csv' % unicode(opts).replace('.', '_')
+#        writer = csv.writer(response, delimiter=';')
+#        field_names = [field.name for field in opts.fields]
+#        # Write a first row with header information
+#        if header:
+#            writer.writerow(field_names)
+#        # Write data rows
+#        for obj in queryset:
+#            values = []
+#            for field in field_names:
+#                value = (getattr(obj, field))
+#                if callable(value):
+#                    try:
+#                        value = value() or ''
+#                    except:
+#                        value = 'Error al recuperar valor'
+#                if value is None:
+#                    value = ''
+#                values.append(unicode(value).encode('utf-8'))
+#            writer.writerow(values)
+#        return response
+#    export_as_csv2.short_description = description
+#    return export_as_csv2
+
 
 
 class cienueveAdmin(admin.ModelAdmin):
@@ -107,15 +204,20 @@ class cas_proc_descAdmin(admin.ModelAdmin):
 
 
 class relacionProcCieAdmin(admin.ModelAdmin):
-    list_display = ('titulos_proc','titulos_cienueve')
     def titulos_proc(self, obj):
         return '%s'%obj.cas_procedimiento.integlosa
     titulos_proc.short_description = 'Titulos Procedimientos'
     def titulos_cienueve(self, obj):
         return '%s'%obj.cienueve.descriptor
+    def cienueve_id(self, obj):
+        return '%s'%obj.cienueve.id
+    def cas_procedimiento_id(self, obj):
+        return '%s'%obj.cas_procedimiento.idintervencionclinica
     titulos_cienueve.short_description = 'Titulos Cie-9'
     raw_id_fields = ('cienueve',)
-    actions = [export_as_csv]
+    list_display = ('id','cas_procedimiento_id','cienueve_id')
+    #actions = [export_as_csv_action, fields=['cas_procedimiento_id'("Exportar a CSV",'cienueve_id'], header=True),]
+    actions = [export_as_csv_action("Exportar a CSV", fields=['id','cas_procedimiento_id'], header=True),]
     class Meta:
         ordering = ['cas_procedimiento_id','id']
 
