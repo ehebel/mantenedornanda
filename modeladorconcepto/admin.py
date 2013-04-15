@@ -40,9 +40,9 @@ export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 
 class radioAdmin(admin.ModelAdmin):
-    list_display = ('QDoc_ExamCode','QDoc_ExamName')
+    list_display = ('QP_ExamCode','QDoc_ExamCode','QDoc_ExamName')
+    list_filter = ('QP_ExamGroupCode','QP_ExamGroupDescription'
+                   ,'revisado','consultar','no_pedible','ambiguo')
     actions = [export_as_csv]
-
-
 
 admin.site.register(radiologico,radioAdmin)
