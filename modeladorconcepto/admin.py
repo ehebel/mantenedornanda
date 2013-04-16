@@ -46,4 +46,10 @@ class radioAdmin(admin.ModelAdmin):
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     actions = [export_as_csv]
 
+class loincAdmin(admin.ModelAdmin):
+    list_filter = ('_class')
+
+admin.site.register(loinc, loincAdmin)
+admin.site.register(source_organization)
+admin.site.register(map_to)
 admin.site.register(radiologico,radioAdmin)
