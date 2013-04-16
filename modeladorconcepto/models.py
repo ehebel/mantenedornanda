@@ -34,6 +34,7 @@ class loinc(models.Model):
     method_typ = models.CharField(max_length=50 , null=True)
     _class = models.CharField(max_length=20 , null=True)
     source = models.CharField(max_length=8 , null=True)
+    date_last_changed = models.CharField(max_length=255, null=True)
     chng_type = models.CharField(max_length=3 , null=True)
     comments = models.TextField()
     status = models.CharField(max_length=11 , null=True)
