@@ -47,7 +47,7 @@ class radioAdmin(admin.ModelAdmin):
     actions = [export_as_csv]
 
 class loincAdmin(admin.ModelAdmin):
-    list_filter = ('_class')
+    list_filter = ('_class',)
 
 admin.site.register(loinc, loincAdmin)
 admin.site.register(source_organization)
