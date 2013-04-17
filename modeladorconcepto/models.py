@@ -17,6 +17,7 @@ class radiologico(models.Model):
     no_pedible = models.BooleanField()
     ambiguo = models.BooleanField()
     observacion = models.CharField(max_length=255, blank=True)
+    #relacion = models.ForeignKey('self', null=True, blank=True)
     def __unicode__(self):
         return self.QDoc_ExamName
     class Meta:
@@ -24,7 +25,7 @@ class radiologico(models.Model):
 
 
 
-class loinc(models.Model):
+class Loinc(models.Model):
     loinc_num = models.CharField(max_length=10 , primary_key=True, null=True)
     component = models.CharField(max_length=255 , null=True)
     property = models.CharField(max_length=30 , null=True)
@@ -73,6 +74,7 @@ class loinc(models.Model):
     common_order_rank = models.IntegerField(null=True)
     common_si_test_rank = models.IntegerField(null=True)
     hl7_attachment_structure = models.CharField(max_length=15 , null=True)
+    mapeo = models.ManyToManyField('self', through='map_to', symmetrical=False)
     def __unicode__(self):
         return self.component
 
@@ -88,8 +90,6 @@ class source_organization(models.Model):
 
 
 class map_to(models.Model):
-    loinc  = models.CharField(max_length=10 , null=True)
-    map_to  = models.CharField(max_length=10 , null=True)
-    comment = models.TextField()
-    def __unicode__(self):
-        return self.loinc
+    loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
+    map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
+    comment = models.CharField(max_length=255)

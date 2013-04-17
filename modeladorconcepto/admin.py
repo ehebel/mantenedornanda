@@ -45,11 +45,12 @@ class radioAdmin(admin.ModelAdmin):
     list_filter = ('revisado','consultar','no_pedible','ambiguo'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     actions = [export_as_csv]
+    #raw_id_fields = ['relacion']
 
 class loincAdmin(admin.ModelAdmin):
     list_filter = ('_class',)
 
-admin.site.register(loinc, loincAdmin)
+admin.site.register(Loinc, loincAdmin)
 admin.site.register(source_organization)
 admin.site.register(map_to)
 admin.site.register(radiologico,radioAdmin)
