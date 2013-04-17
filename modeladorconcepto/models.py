@@ -23,6 +23,11 @@ class radiologico(models.Model):
     class Meta:
         ordering=['QP_ExamGroupCode']
 
+class img_descripcion(models.Model):
+    desc_completa = models.CharField(max_length=255)
+    QDoc_Code = models.ForeignKey(radiologico, null=True, blank=True)
+    def __unicode__(self):
+        return self.desc_completa
 
 
 class Loinc(models.Model):
