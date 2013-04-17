@@ -53,4 +53,5 @@ class loincAdmin(admin.ModelAdmin):
 admin.site.register(Loinc, loincAdmin)
 admin.site.register(source_organization)
 admin.site.register(map_to)
+admin.site.register(img_descripcion)
 admin.site.register(radiologico,radioAdmin)
