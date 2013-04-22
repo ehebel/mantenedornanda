@@ -6,7 +6,8 @@ import csv
 from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
 
-admin.site.disable_action('delete_selected')
+if 'delete_selected' in admin.site.actions:
+    admin.site.disable_action('delete_selected')
 
 def export_as_csv(modeladmin, request, queryset):
     """
