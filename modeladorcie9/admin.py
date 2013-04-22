@@ -235,10 +235,10 @@ class kairosproductosAdmin(admin.ModelAdmin):
     actions = [export_as_csv]
 
 class relVMPdbnetAdmin(admin.ModelAdmin):
-    actions = [export_as_csv_action]
+    actions = [export_as_csv_action("Exportar como CSV", fields=['id','cas_term_vtm_vmp_id','cas_dbnet_producto_id'], header=True),]
 
 class relVMPkairosAdmin(admin.ModelAdmin):
-    actions = [export_as_csv_action]
+    actions = [export_as_csv_action("Exportar como CSV", fields=['id','cas_term_vtm_vmp_id','cas_kairos_producto_id'], header=True),]
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
