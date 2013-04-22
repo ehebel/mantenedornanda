@@ -235,9 +235,19 @@ class kairosproductosAdmin(admin.ModelAdmin):
     actions = [export_as_csv]
 
 class relVMPdbnetAdmin(admin.ModelAdmin):
+    def cas_term_vtm_vmp_id(self, obj):
+        return '%s'%obj.cas_term_vtm_vmp.descriptionid_vmp
+    def cas_dbnet_producto_id(self, obj):
+        return '%s'%obj.cas_dbnet_producto.codigo
+    list_display = ['id','cas_term_vtm_vmp_id','cas_dbnet_producto_id']
     actions = [export_as_csv_action("Exportar como CSV", fields=['id','cas_term_vtm_vmp_id','cas_dbnet_producto_id'], header=True),]
 
 class relVMPkairosAdmin(admin.ModelAdmin):
+    def cas_term_vtm_vmp_id(self, obj):
+        return '%s'%obj.cas_term_vtm_vmp.descriptionid_vmp
+    def cas_kairos_producto_id(self, obj):
+        return '%s'%obj.cas_kairos_producto.idkairos
+    list_display = ['id','cas_term_vtm_vmp_id','cas_kairos_producto_id']
     actions = [export_as_csv_action("Exportar como CSV", fields=['id','cas_term_vtm_vmp_id','cas_kairos_producto_id'], header=True),]
 
 admin.site.register(cas_concepto)
