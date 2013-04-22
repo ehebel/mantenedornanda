@@ -232,3 +232,11 @@ class cas_kairos_relacion_producto_sustancia(models.Model):
     producto_clave = models.ForeignKey(cas_kairos_producto)
     sustancia_clave = models.ForeignKey(cas_kairos_sustancia)
     importancia = models.IntegerField()
+
+class cas_term_vtm_vmp_dbnet(models.Model):
+    cas_term_vtm_vmp_id = models.ForeignKey(cas_term_vtm_vmp)
+    cas_dbnet_producto_id = models.ForeignKey(cas_dbnet_producto)
+
+class cas_term_vtm_vmp_kairos(models.Model):
+    cas_term_vtm_vmp_id = models.ForeignKey(cas_term_vtm_vmp)
+    cas_kairos_producto_id = models.ForeignKey(cas_kairos_producto)

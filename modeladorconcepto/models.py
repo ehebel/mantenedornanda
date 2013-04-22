@@ -79,12 +79,12 @@ class Loinc(models.Model):
     common_order_rank = models.IntegerField(null=True)
     common_si_test_rank = models.IntegerField(null=True)
     hl7_attachment_structure = models.CharField(max_length=15 , null=True)
-    mapeo = models.ManyToManyField('self', through='map_to', symmetrical=False)
+    mapeo = models.ManyToManyField('self', through='Loinc_map_to', symmetrical=False)
     def __unicode__(self):
         return self.component
 
 
-class source_organization(models.Model):
+class Loinc_source_organization(models.Model):
     copyright_id = models.CharField(max_length=255, primary_key=True)
     name = models.CharField(max_length=255)
     copyright = models.TextField()
@@ -94,7 +94,35 @@ class source_organization(models.Model):
         return  self.name
 
 
-class map_to(models.Model):
+class Loinc_map_to(models.Model):
     loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
+
+class Sct_concept(models.Model):
+    conceptid = models.BigIntegerField(primary_key=True)
+    conceptstatus = models.IntegerField()
+    fullyspecifiedname = models.CharField(max_length=255)
+    ctv3id = models.CharField(max_length=50)
+    snomedid = models.CharField(max_length=50)
+    isprimitive = models.IntegerField()
+    relationship = models.ManyToManyField('self', through='Sct_relationship', symmetrical=False)
+
+class Sct_description(models.Model):
+    descriptionid =	models.BigIntegerField(primary_key=True)
+    descriptionstatus = models.IntegerField()
+    conceptid = models.ForeignKey(Sct_concept)
+    term = models.CharField(max_length=255)
+    initialcapitalstatus = models.IntegerField()
+    descriptiontype	= models.IntegerField()
+    languagecode = models.CharField(max_length=10)
+
+class Sct_relationship(models.Model):
+    relationshipid	= models.BigIntegerField(primary_key=True)
+    conceptid1	= models.ForeignKey(Sct_concept, related_name='Concept 1')
+#    relationshiptype	= models.ForeignKey(Sct_concepts, related_name='Relationship Type')
+    relationshiptype	= models.BigIntegerField()
+    conceptid2	= models.ForeignKey(Sct_concept, related_name='Concept 2')
+    characteristictype	= models.IntegerField()
+    refinability	= models.IntegerField()
+    relationshipgroup = models.IntegerField()

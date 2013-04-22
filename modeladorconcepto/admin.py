@@ -1,11 +1,12 @@
 __author__ = 'ehebel'
 from django.contrib import admin
 from mantenedornanda.modeladorconcepto.models import *
-
+from django.forms import TextInput, Textarea
 import csv
 from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
 
+admin.site.disable_action('delete_selected')
 
 def export_as_csv(modeladmin, request, queryset):
     """
@@ -46,12 +47,22 @@ class radioAdmin(admin.ModelAdmin):
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     actions = [export_as_csv]
     #raw_id_fields = ['relacion']
+    formfield_overrides = {
+        models.CharField: {'widget': TextInput(attrs={'size':'80'})},
+        models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
+        }
+
 
 class loincAdmin(admin.ModelAdmin):
     list_filter = ('_class',)
 
+
+
 admin.site.register(Loinc, loincAdmin)
-admin.site.register(source_organization)
-admin.site.register(map_to)
+admin.site.register(Loinc_source_organization)
+admin.site.register(Loinc_map_to)
+admin.site.register(Sct_concept)
+admin.site.register(Sct_description)
+admin.site.register(Sct_relationship)
 admin.site.register(img_descripcion)
 admin.site.register(radiologico,radioAdmin)

@@ -8,7 +8,7 @@ from django.forms import Textarea, TextInput
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-#admin.site.disable_action('delete_selected')
+admin.site.disable_action('delete_selected')
 
 class MyUserAdmin(UserAdmin):
     list_filter = UserAdmin.list_filter + ('groups__name',)
@@ -106,47 +106,6 @@ def export_as_csv_action(description="Exportar a CSV",fields=None, exclude=None 
 
     exporta_a_csv.short_description = description
     return exporta_a_csv
-
-#def export_as_csv_action(description="Export selected objects as CSV file",
-#                         fields=None, exclude=None, header=True):
-#    """
-#    This function returns an export csv action
-#    'fields' and 'exclude' work like in django ModelForm
-#    'header' is whether or not to output the column names as the first row
-#    """
-#    def export_as_csv2(modeladmin, request, queryset):
-#        """
-#        Generic csv export admin action.
-#        based on http://djangosnippets.org/snippets/1697/
-#        """
-#        if not request.user.is_staff:
-#            raise PermissionDenied
-#        opts = modeladmin.model._meta
-#        response = HttpResponse(mimetype='text/csv')
-#        response['Content-Disposition'] = 'attachment; filename=%s.csv' % unicode(opts).replace('.', '_')
-#        writer = csv.writer(response, delimiter=';')
-#        field_names = [field.name for field in opts.fields]
-#        # Write a first row with header information
-#        if header:
-#            writer.writerow(field_names)
-#        # Write data rows
-#        for obj in queryset:
-#            values = []
-#            for field in field_names:
-#                value = (getattr(obj, field))
-#                if callable(value):
-#                    try:
-#                        value = value() or ''
-#                    except:
-#                        value = 'Error al recuperar valor'
-#                if value is None:
-#                    value = ''
-#                values.append(unicode(value).encode('utf-8'))
-#            writer.writerow(values)
-#        return response
-#    export_as_csv2.short_description = description
-#    return export_as_csv2
-
 
 
 class cienueveAdmin(admin.ModelAdmin):
@@ -274,7 +233,11 @@ class kairosproductosAdmin(admin.ModelAdmin):
     search_fields = ('productos_descripcion','abreviatura','laboratorios_descripcion')
     actions = [export_as_csv]
 
+class relVMPdbnetAdmin(admin.ModelAdmin):
+    actions = [export_as_csv_action]
 
+class relVMPkairosAdmin(admin.ModelAdmin):
+    actions = [export_as_csv_action]
 
 admin.site.register(cas_concepto)
 admin.site.register(cas_descripcion)
@@ -290,7 +253,8 @@ admin.site.register(cas_kairos_sustancia)
 admin.site.register(cas_kairos_relacion_producto_ax)
 admin.site.register(cas_kairos_relacion_producto_sustancia)
 admin.site.register(cas_term_vtm)
-
+admin.site.register(cas_term_vtm_vmp_dbnet,relVMPdbnetAdmin)
+admin.site.register(cas_term_vtm_vmp_kairos)
 
 admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)
