@@ -265,7 +265,7 @@ admin.site.register(cas_kairos_relacion_producto_ax)
 admin.site.register(cas_kairos_relacion_producto_sustancia)
 admin.site.register(cas_term_vtm)
 admin.site.register(cas_term_vtm_vmp_dbnet,relVMPdbnetAdmin)
-admin.site.register(cas_term_vtm_vmp_kairos)
+admin.site.register(cas_term_vtm_vmp_kairos,relVMPkairosAdmin)
 
 admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)
