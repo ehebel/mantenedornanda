@@ -42,16 +42,25 @@ export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 
 class radioAdmin(admin.ModelAdmin):
-    list_display = ('QP_ExamCode','QDoc_ExamCode','QDoc_ExamName'
+    list_display = ('QDoc_ExamName','observacion'
                     ,'revisado','consultar','no_pedible','ambiguo')
     list_filter = ('revisado','consultar','no_pedible','ambiguo'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
+    search_fields = ('QDoc_ExamName','observacion')
     actions = [export_as_csv]
     #raw_id_fields = ['relacion']
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
+    fieldsets = (
+        (None, {
+            'fields': ('QDoc_ExamName','observacion'
+                        ,'revisado','consultar','no_pedible','ambiguo'
+                 #       ,'QP_ExamGroupCode','QP_ExamGroupDescription'
+                )
+        }),
+        )
     def add_view(self, request, *args, **kwargs):
         result = super(radioAdmin, self).add_view(request, *args, **kwargs )
         request.session['filtered'] =  None
