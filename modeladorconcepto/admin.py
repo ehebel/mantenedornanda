@@ -52,6 +52,27 @@ class radioAdmin(admin.ModelAdmin):
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
+    def add_view(self, request, *args, **kwargs):
+        result = super(radioAdmin, self).add_view(request, *args, **kwargs )
+        request.session['filtered'] =  None
+        return result
+    def change_view(self, request, object_id, extra_context={}):
+        result = super(radioAdmin, self).change_view(request, object_id, extra_context )
+        ref = request.META.get('HTTP_REFERER', '')
+        if ref.find('?') != -1:
+            request.session['filtered'] =  ref
+        if request.POST.has_key('_save'):
+            try:
+                if request.session['filtered'] is not None:
+                    result['Location'] = request.session['filtered']
+                    request.session['filtered'] = None
+            except:
+                pass
+        return result
+    formfield_overrides = {
+        models.CharField: {'widget': TextInput(attrs={'size':'100'})},
+        models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
+        }
 
 
 class loincAdmin(admin.ModelAdmin):
