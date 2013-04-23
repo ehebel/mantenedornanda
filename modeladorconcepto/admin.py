@@ -43,7 +43,8 @@ export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName','observacion'
-                    ,'revisado','consultar','no_pedible','ambiguo')
+        ##            ,'revisado','consultar','no_pedible','ambiguo'
+        )
     list_filter = ('revisado','consultar','no_pedible','ambiguo'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
