@@ -9,6 +9,14 @@ from django.core.exceptions import PermissionDenied
 if 'delete_selected' in admin.site.actions:
     admin.site.disable_action('delete_selected')
 
+def make_consultar(modeladmin, request, queryset):
+    queryset.update(consultar='1')
+make_consultar.short_description = 'Marcar codigos para consultar.'
+
+def make_revisado(modeladmin, request, queryset):
+    queryset.update(revisado='1')
+make_revisado.short_description = 'Marcar codigos seleccionados como revisados.'
+
 def export_as_csv(modeladmin, request, queryset):
     """
     Generic csv export admin action.
@@ -48,7 +56,7 @@ class radioAdmin(admin.ModelAdmin):
     list_filter = ('revisado','consultar','no_pedible','ambiguo'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
-    actions = [export_as_csv]
+    actions = [export_as_csv,make_revisado,make_consultar]
     #raw_id_fields = ['relacion']
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
