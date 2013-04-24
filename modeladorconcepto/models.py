@@ -61,7 +61,7 @@ class Loinc(models.Model):
     relatednames2 = models.TextField( blank=True)
     shortname = models.CharField(max_length=40 , null=True, blank=True)
     order_obs = models.CharField(max_length=15 , null=True, blank=True)
-    cdisc_common_tests = models.CharField(max_length=1 , null=True)
+    cdisc_common_tests = models.CharField(max_length=1 , null=True, blank=True)
     hl7_field_subfield_id = models.CharField(max_length=50 , null=True, blank=True)
     external_copyright_notice = models.TextField( blank=True)
     example_units = models.CharField(max_length=255 , null=True, blank=True)
@@ -74,7 +74,7 @@ class Loinc(models.Model):
     example_si_ucum_units = models.CharField(max_length=255 , null=True, blank=True)
     status_reason = models.CharField(max_length=9 , null=True, blank=True)
     status_text = models.TextField( blank=True)
-    change_reason_public = models.CharField(max_length=255 ,null=True, blank=True)
+    change_reason_public = models.TextField(null=True, blank=True)
     common_test_rank = models.IntegerField(null= True, blank=True)
     common_order_rank = models.IntegerField(null=True, blank=True)
     common_si_test_rank = models.IntegerField(null=True, blank=True)
@@ -95,7 +95,6 @@ class Loinc_source_organization(models.Model):
 
 
 class Loinc_map_to(models.Model):
-    id = models.IntegerField(primary_key=True)
     loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
