@@ -30,7 +30,7 @@ class img_descripcion(models.Model):
         return self.desc_completa
 
 
-class Loinc(models.Model):
+class loinc(models.Model):
     loinc_num = models.CharField(max_length=10 , primary_key=True, null=True)
     component = models.CharField(max_length=255 , null=True, blank=True)
     property = models.CharField(max_length=30 , null=True, blank=True)
@@ -95,8 +95,8 @@ class Loinc_source_organization(models.Model):
 
 
 class Loinc_map_to(models.Model):
-    loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
-    map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
+    loinc_id  = models.ForeignKey(loinc, related_name='Desde concepto')
+    map_to  = models.ForeignKey(loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
 
 
