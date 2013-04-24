@@ -95,9 +95,11 @@ class Loinc_source_organization(models.Model):
 
 
 class Loinc_map_to(models.Model):
+    id = models.IntegerField(primary_key=True)
     loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
+
 
 class Sct_concept(models.Model):
     conceptid = models.BigIntegerField(primary_key=True)
