@@ -79,7 +79,7 @@ class loinc(models.Model):
     common_order_rank = models.IntegerField(null=True, blank=True)
     common_si_test_rank = models.IntegerField(null=True, blank=True)
     hl7_attachment_structure = models.CharField(max_length=15 , null=True, blank=True)
-    mapeo = models.ManyToManyField('self', through='Loinc_map_to', symmetrical=False)
+    mapeo = models.ManyToManyField('self', through='loinc_map_to', symmetrical=False)
     def __unicode__(self):
         return self.component
 
@@ -94,8 +94,8 @@ class Loinc_source_organization(models.Model):
         return  self.name
 
 
-class Loinc_map_to(models.Model):
-    loinc_id  = models.ForeignKey(loinc, related_name='Desde concepto')
+class loinc_map_to(models.Model):
+    loinc1  = models.ForeignKey(loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
 
