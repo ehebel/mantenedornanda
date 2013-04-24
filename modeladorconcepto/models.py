@@ -74,7 +74,7 @@ class Loinc(models.Model):
     example_si_ucum_units = models.CharField(max_length=255 , null=True)
     status_reason = models.CharField(max_length=9 , null=True)
     status_text = models.TextField()
-    change_reason_public = models.IntegerField(null=True)
+    change_reason_public = models.CharField(max_length=255 ,null=True)
     common_test_rank = models.IntegerField(null= True)
     common_order_rank = models.IntegerField(null=True)
     common_si_test_rank = models.IntegerField(null=True)
@@ -95,6 +95,7 @@ class Loinc_source_organization(models.Model):
 
 
 class Loinc_map_to(models.Model):
+    id = models.IntegerField(primary_key=True)
     loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255)
