@@ -30,7 +30,7 @@ class img_descripcion(models.Model):
         return self.desc_completa
 
 
-class loinc(models.Model):
+class Loinc(models.Model):
     loinc_num = models.CharField(max_length=10 , primary_key=True, null=True)
     component = models.CharField(max_length=255 , null=True, blank=True)
     property = models.CharField(max_length=30 , null=True, blank=True)
@@ -79,7 +79,7 @@ class loinc(models.Model):
     common_order_rank = models.IntegerField(null=True, blank=True)
     common_si_test_rank = models.IntegerField(null=True, blank=True)
     hl7_attachment_structure = models.CharField(max_length=15 , null=True, blank=True)
-    mapeo = models.ManyToManyField('self', through='loinc_map_to', symmetrical=False)
+    mapeo = models.ManyToManyField('self', through='Loinc_map_to', symmetrical=False)
     def __unicode__(self):
         return self.component
 
@@ -94,10 +94,12 @@ class Loinc_source_organization(models.Model):
         return  self.name
 
 
-class loinc_map_to(models.Model):
-    loinc1  = models.ForeignKey(loinc, related_name='Desde concepto')
-    map_to  = models.ForeignKey(loinc, related_name='Hacia concepto')
-    comment = models.CharField(max_length=255)
+class Loinc_map_to(models.Model):
+    loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
+    map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
+    comment = models.CharField(max_length=255, blank=True)
+    class Meta:
+        ordering=['id']
 
 
 class Sct_concept(models.Model):

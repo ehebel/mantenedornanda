@@ -98,9 +98,9 @@ class loincAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(loinc, loincAdmin)
+admin.site.register(Loinc, loincAdmin)
 admin.site.register(Loinc_source_organization)
-admin.site.register(loinc_map_to)
+admin.site.register(Loinc_map_to)
 admin.site.register(Sct_concept)
 admin.site.register(Sct_description)
 admin.site.register(Sct_relationship)
