@@ -21,7 +21,7 @@ class radiologico(models.Model):
     def __unicode__(self):
         return self.QDoc_ExamName
     class Meta:
-        ordering=['QP_ExamGroupCode']
+        ordering=['QDoc_ExamName']
 
 class img_descripcion(models.Model):
     desc_completa = models.CharField(max_length=255)
