@@ -56,6 +56,7 @@ class radioAdmin(admin.ModelAdmin):
     list_filter = ('revisado','consultar','no_pedible','ambiguo'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
+    readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription')
     actions = [export_as_csv,make_revisado,make_consultar]
     #raw_id_fields = ['relacion']
     formfield_overrides = {
@@ -64,8 +65,8 @@ class radioAdmin(admin.ModelAdmin):
         }
     fieldsets = (
         (None, {
-            'fields': ('QDoc_ExamName','observacion'
-                        ,'revisado','consultar','no_pedible','ambiguo'
+            'fields': ('QDoc_ExamName','revisado','observacion'
+                        ,'consultar','no_pedible','ambiguo','QDoc_ExamCode','Origin_File'
                  #       ,'QP_ExamGroupCode','QP_ExamGroupDescription'
                 )
         }),
