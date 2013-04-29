@@ -53,7 +53,7 @@ class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName','observacion'
         ##            ,'revisado','consultar','no_pedible','ambiguo'
         )
-    list_filter = ('revisado','consultar','no_pedible','ambiguo'
+    list_filter = ('revisado','consultar','no_pedible','ambiguo','Origin_File'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
     readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription')
@@ -67,7 +67,7 @@ class radioAdmin(admin.ModelAdmin):
         (None, {
             'fields': ('QDoc_ExamName','revisado','observacion'
                         ,'consultar','no_pedible','ambiguo','QDoc_ExamCode','Origin_File'
-                 #       ,'QP_ExamGroupCode','QP_ExamGroupDescription'
+                        ,'QP_ExamGroupCode','QP_ExamGroupDescription'
                 )
         }),
         )
