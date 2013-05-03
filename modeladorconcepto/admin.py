@@ -54,7 +54,7 @@ export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 
 class RadioInline(admin.TabularInline):
-    model = radiologico
+    model = img_descripcion
 
 
 
