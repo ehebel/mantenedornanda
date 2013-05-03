@@ -102,6 +102,8 @@ class loincAdmin(admin.ModelAdmin):
     list_filter = ('_class',)
 
 
+#class loincMapAdmin(admin.ModelAdmin):
+
 
 admin.site.register(Loinc, loincAdmin)
 admin.site.register(Loinc_source_organization)
