@@ -53,6 +53,11 @@ def export_as_csv(modeladmin, request, queryset):
 export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 
+class RadioInline(admin.TabularInline):
+    model = radiologico
+
+
+
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName','observacion'
         ##            ,'revisado','consultar','no_pedible','ambiguo'
@@ -67,9 +72,12 @@ class radioAdmin(admin.ModelAdmin):
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
+    inlines = [
+        RadioInline,
+        ]
     fieldsets = (
         (None, {
-            'fields': ('QDoc_ExamName','revisado','observacion'
+            'fields': ('QDoc_ExamName','QDoc_ExamName2','revisado','observacion'
                         ,'consultar','no_pedible','ambiguo','QDoc_ExamCode','Origin_File'
                         ,'QP_ExamGroupCode','QP_ExamGroupDescription'
                 )
@@ -104,7 +112,7 @@ class loincAdmin(admin.ModelAdmin):
 
 class loincMapAdmin(admin.ModelAdmin):
     def codigos_loinc(self, obj):
-        return '%s'%obj.loinc.loinc_num
+        return '%s'%obj.loinc.component
     codigos_loinc.short_description = 'Codigos Loinc'
     def codigos_mapeo(self, obj):
         return '%s'%obj.loinc.loinc_num
