@@ -104,13 +104,15 @@ class loincAdmin(admin.ModelAdmin):
 
 class loincMapAdmin(admin.ModelAdmin):
     def codigos_loinc(self, obj):
-        return '%s'%obj.loinc_map_to.loinc_id
+        return '%s'%obj.loinc.loinc_num
     codigos_loinc.short_description = 'Codigos Loinc'
     def codigos_mapeo(self, obj):
-        return '%s'%obj.loinc_map_to.map_to_id
+        return '%s'%obj.loinc.loinc_num
     codigos_mapeo.short_description = 'Codigos de Mapeo'
+    list_display = ('id','codigos_loinc','codigos_mapeo')
     class Meta:
         ordering = ['id']
+
 
 admin.site.register(Loinc, loincAdmin)
 admin.site.register(Loinc_source_organization)
