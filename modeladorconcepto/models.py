@@ -98,8 +98,6 @@ class Loinc_map_to(models.Model):
     loinc  = models.ForeignKey(Loinc, related_name='Desde concepto')
     map_to  = models.ForeignKey(Loinc, related_name='Hacia concepto')
     comment = models.CharField(max_length=255, blank=True)
-    def __unicode__(self):
-        return self.id
     class Meta:
         ordering=['id']
 
