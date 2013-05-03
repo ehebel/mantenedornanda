@@ -52,11 +52,14 @@ def export_as_csv(modeladmin, request, queryset):
     return response
 export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
+class DescInline(admin.TabularInline):
+    model = img_descripcione
 
-class RadioInline(admin.TabularInline):
-    model = img_descripcion
+class ConcRadInLine(admin.TabularInline):
+    model = img_concepto
 
-
+class RadConceptAdmin(admin.ModelAdmin):
+    inlines = [DescInline,]
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName','observacion'
@@ -72,9 +75,7 @@ class radioAdmin(admin.ModelAdmin):
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
-    inlines = [
-        RadioInline,
-        ]
+    inlines = [ConcRadInLine,]
     fieldsets = (
         (None, {
             'fields': ('QDoc_ExamName','QDoc_ExamName2','revisado','observacion'
@@ -128,5 +129,6 @@ admin.site.register(Loinc_map_to,loincMapAdmin)
 admin.site.register(Sct_concept)
 admin.site.register(Sct_description)
 admin.site.register(Sct_relationship)
-admin.site.register(img_descripcion)
+admin.site.register(img_concepto,RadConceptAdmin)
+admin.site.register(img_descripcione)
 admin.site.register(radiologico,radioAdmin)

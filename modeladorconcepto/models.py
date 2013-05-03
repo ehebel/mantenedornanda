@@ -23,11 +23,24 @@ class radiologico(models.Model):
     class Meta:
         ordering=['QDoc_ExamName']
 
-class img_descripcion(models.Model):
-    desc_completa = models.CharField(max_length=255)
+class img_concepto(models.Model):
+    fsn = models.CharField('Fully Specified Name',max_length=255, )
     QDoc_Code = models.ForeignKey(radiologico, null=True, blank=True)
     def __unicode__(self):
-        return self.desc_completa
+        return self.fsn
+
+class img_descripcione(models.Model):
+    OPCIONES_TIPO = (
+        (1,'Preferido'),
+        (2,'Sinonimo Visible'),
+#        (3,'Descripcion Completa'),
+#        (4,'Error tipografico'),
+        )
+    termino = models.CharField(max_length=255)
+    id_concepto = models.ForeignKey(img_concepto, null=True, blank=True)
+    tipodescripcion = models.IntegerField(choices=OPCIONES_TIPO)
+    def __unicode__(self):
+        return self.termino
 
 
 class Loinc(models.Model):
