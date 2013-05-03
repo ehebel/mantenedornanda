@@ -17,6 +17,10 @@ def make_revisado(modeladmin, request, queryset):
     queryset.update(revisado='1')
 make_revisado.short_description = 'Marcar codigos seleccionados como revisados.'
 
+def make_ambiguo(modeladmin, request, queryset):
+    queryset.update(ambiguo='1')
+make_ambiguo.short_description = 'Marcar codigos seleccionados como ambiguos'
+
 def export_as_csv(modeladmin, request, queryset):
     """
     Generic csv export admin action.
@@ -57,7 +61,7 @@ class radioAdmin(admin.ModelAdmin):
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
     readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription')
-    actions = [export_as_csv,make_revisado,make_consultar]
+    actions = [export_as_csv,make_revisado,make_consultar, make_ambiguo]
     #raw_id_fields = ['relacion']
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
