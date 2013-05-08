@@ -62,8 +62,11 @@ class DescInline(admin.TabularInline):
 class ConcRadInLine(admin.TabularInline):
     model = img_concepto
 
+
 class RadConceptAdmin(admin.ModelAdmin):
     inlines = [DescInline,]
+    search_fields = ('fsn',)
+    ordering = ('fsn',)
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName','observacion'
@@ -112,6 +115,10 @@ class radioAdmin(admin.ModelAdmin):
         }
 
 
+class HIBA_img_Admin(admin.ModelAdmin):
+    search_fields = ('termino',)
+    ordering = ('termino',)
+
 class loincAdmin(admin.ModelAdmin):
     list_filter = ('_class',)
 
@@ -137,3 +144,4 @@ admin.site.register(Sct_relationship)
 admin.site.register(img_concepto,RadConceptAdmin)
 admin.site.register(img_descripcione)
 admin.site.register(radiologico,radioAdmin)
+admin.site.register(practicas_img_HIBA,HIBA_img_Admin)

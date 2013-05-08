@@ -42,6 +42,10 @@ class img_descripcione(models.Model):
     def __unicode__(self):
         return self.termino
 
+class practicas_img_HIBA(models.Model):
+    termino = models.CharField(max_length=255)
+    def __unicode__(self):
+        return self.termino
 
 class Loinc(models.Model):
     loinc_num = models.CharField(max_length=10 , primary_key=True, null=True)
