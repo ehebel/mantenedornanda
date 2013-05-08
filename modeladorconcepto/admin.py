@@ -82,9 +82,10 @@ class radioAdmin(admin.ModelAdmin):
     inlines = [ConcRadInLine,]
     fieldsets = (
         (None, {
-            'fields': ('QDoc_ExamName','QDoc_ExamName2','revisado','observacion'
-                        ,'consultar','no_pedible','ambiguo','QDoc_ExamCode','Origin_File'
-                        ,'QP_ExamGroupCode','QP_ExamGroupDescription'
+            'fields': ('QDoc_ExamName'##,'QDoc_ExamName2'
+                       ,'revisado','observacion'
+                       ## ,'consultar','no_pedible','ambiguo','QDoc_ExamCode','Origin_File'
+                       ## ,'QP_ExamGroupCode','QP_ExamGroupDescription'
                 )
         }),
         )
