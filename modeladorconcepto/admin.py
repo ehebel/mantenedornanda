@@ -70,6 +70,7 @@ class RadConceptAdmin(admin.ModelAdmin):
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName'
+                    ,'observacion'
                     ,'conceptos'
                     ##            ,'revisado','consultar','no_pedible','ambiguo'
         )
