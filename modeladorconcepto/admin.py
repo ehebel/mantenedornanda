@@ -69,9 +69,12 @@ class RadConceptAdmin(admin.ModelAdmin):
     ordering = ('fsn',)
 
 class radioAdmin(admin.ModelAdmin):
-    list_display = ('QDoc_ExamName','observacion'
-        ##            ,'revisado','consultar','no_pedible','ambiguo'
+    list_display = ('QDoc_ExamName'
+                    ,'conceptos'
+                    ##            ,'revisado','consultar','no_pedible','ambiguo'
         )
+
+
     list_filter = ('revisado','consultar','no_pedible','ambiguo','Origin_File'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')

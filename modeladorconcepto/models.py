@@ -18,6 +18,10 @@ class radiologico(models.Model):
     ambiguo = models.BooleanField()
     observacion = models.CharField(max_length=255, blank=True)
     #relacion = models.ForeignKey('self', null=True, blank=True)
+    def conceptos(objeto):
+        return '<br/>'.join(c.fsn for c in objeto.img_concepto_set.order_by('id')[:3])
+    conceptos.allow_tags = True
+    conceptos.short_description = 'Fully Sp. Name'
     def __unicode__(self):
         return self.QDoc_ExamName
     class Meta:
