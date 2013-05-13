@@ -91,6 +91,10 @@ class radioAdmin(admin.ModelAdmin):
                        ## ,'QP_ExamGroupCode','QP_ExamGroupDescription'
                 )
         }),
+        ('Opciones Avanzadas', {
+            'classes': ('collapse',),
+            'fields': ('consultar', 'no_pedible', 'ambiguo','QDoc_ExamCode','Origin_File','QP_ExamGroupCode','QP_ExamGroupDescription')
+        }),
         )
     def add_view(self, request, *args, **kwargs):
         result = super(radioAdmin, self).add_view(request, *args, **kwargs )
