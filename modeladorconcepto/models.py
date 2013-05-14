@@ -150,3 +150,13 @@ class Sct_relationship(models.Model):
     characteristictype	= models.IntegerField()
     refinability	= models.IntegerField()
     relationshipgroup = models.IntegerField()
+
+class vtm(models.Model):
+    vtmid = models.IntegerField(primary_key=True)
+    invalid = models.IntegerField(null=True, blank=True)
+    nm = models.CharField(max_length=255)
+    abbrevnm = models.CharField(max_length=255, null=True, blank=True)
+    vtmidprev = models.CharField(max_length=255, null=True, blank=True)
+    vtmiddt = models.CharField(max_length=255, null=True, blank=True)
+    def __unicode__(self):
+        return  self.nm
