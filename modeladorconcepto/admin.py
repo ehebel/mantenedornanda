@@ -66,16 +66,13 @@ class RadConceptAdmin(admin.ModelAdmin):
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName'
-                    ,'observacion'
+                    ,'QP_ExamDescription'
                     ,'conceptos'
-                    ##            ,'revisado','consultar','no_pedible','ambiguo'
         )
-
-
     list_filter = ('revisado','consultar','no_pedible','ambiguo','Origin_File'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
-    readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription')
+    readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription','QP_ExamCode','QP_ExamDescription')
     actions = [export_as_csv,make_revisado,make_consultar, make_ambiguo]
     #raw_id_fields = ['relacion']
     formfield_overrides = {
@@ -93,7 +90,8 @@ class radioAdmin(admin.ModelAdmin):
         }),
         ('Opciones Avanzadas', {
             'classes': ('collapse',),
-            'fields': ('consultar', 'no_pedible', 'ambiguo','QDoc_ExamCode','Origin_File','QP_ExamGroupCode','QP_ExamGroupDescription')
+            'fields': ('consultar', 'no_pedible', 'ambiguo','QDoc_ExamCode','Origin_File'
+                       ,'QP_ExamGroupCode','QP_ExamGroupDescription','QP_ExamCode','QP_ExamDescription')
         }),
         )
     def add_view(self, request, *args, **kwargs):
