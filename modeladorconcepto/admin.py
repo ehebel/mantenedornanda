@@ -69,7 +69,7 @@ class radioAdmin(admin.ModelAdmin):
                     ,'QP_ExamDescription'
                     ,'conceptos'
         )
-    list_filter = ('revisado','consultar','no_pedible','ambiguo','Origin_File'
+    list_filter = ('revisado','consultar','no_pedible','ambiguo','Origin_File','QDoc_GroupedExams'
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
     readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription','QP_ExamCode','QP_ExamDescription')
