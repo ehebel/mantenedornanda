@@ -90,7 +90,7 @@ class radioAdmin(admin.ModelAdmin):
         }),
         ('Opciones Avanzadas', {
             'classes': ('collapse',),
-            'fields': ('consultar', 'no_pedible', 'ambiguo','QDoc_ExamCode','Origin_File'
+            'fields': ('consultar', 'no_pedible', 'ambiguo','QDoc_ExamCode','Origin_File','QDoc_GroupedExams','QDoc_DateInactive'
                        ,'QP_ExamGroupCode','QP_ExamGroupDescription','QP_ExamCode','QP_ExamDescription')
         }),
         )
