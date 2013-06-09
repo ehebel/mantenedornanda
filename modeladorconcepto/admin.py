@@ -9,17 +9,21 @@ from django.core.exceptions import PermissionDenied
 if 'delete_selected' in admin.site.actions:
     admin.site.disable_action('delete_selected')
 
-def make_consultar(modeladmin, request, queryset):
-    queryset.update(consultar='1')
+def make_consultar(modeladmin, request, queryset1):
+    queryset1.update(consultar='1')
 make_consultar.short_description = 'Marcar codigos para consultar.'
 
-def make_revisado(modeladmin, request, queryset):
-    queryset.update(revisado='1')
+def make_revisado(modeladmin, request, queryset2):
+    queryset2.update(revisado='1')
 make_revisado.short_description = 'Marcar codigos seleccionados como revisados.'
 
-def make_ambiguo(modeladmin, request, queryset):
-    queryset.update(ambiguo='1')
+def make_ambiguo(modeladmin, request, queryset3):
+    queryset3.update(ambiguo='1')
 make_ambiguo.short_description = 'Marcar codigos seleccionados como ambiguos'
+
+def make_no_pedible(modeladmin, request, queryset4):
+    queryset4.update(no_pedible='1')
+make_no_pedible.short_description = 'Marcar codigos seleccionados como No Pedibles'
 
 def export_as_csv(modeladmin, request, queryset):
     """
@@ -57,6 +61,10 @@ class DescInline(admin.TabularInline):
 
 class ConcRadInLine(admin.TabularInline):
     model = img_concepto
+    formfield_overrides = {
+        models.CharField: {'widget': TextInput(attrs={'size':'150'})},
+        #models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
+        }
 
 
 class RadConceptAdmin(admin.ModelAdmin):
@@ -73,8 +81,7 @@ class radioAdmin(admin.ModelAdmin):
                    ,'QP_ExamGroupCode','QP_ExamGroupDescription'  )
     search_fields = ('QDoc_ExamName','observacion')
     readonly_fields = ('QP_ExamGroupCode','QP_ExamGroupDescription','QP_ExamCode','QP_ExamDescription')
-    actions = [export_as_csv,make_revisado,make_consultar, make_ambiguo]
-    #raw_id_fields = ['relacion']
+    actions = [export_as_csv,make_no_pedible, make_revisado, make_consultar, make_ambiguo]
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size':'80'})},
         models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
