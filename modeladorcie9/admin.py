@@ -117,8 +117,8 @@ class cienueveAdmin(admin.ModelAdmin):
 
 
 class procedimientoAdmin(admin.ModelAdmin):
-    list_display = ('idintervencionclinica','integlosa','grpdescripcion','codsubgrupo'
-                    ,'sgrdescripcion','inte_codigo_fonasa','revisado','consultar')
+    list_display = ('idintervencionclinica','integlosa','grpdescripcion'
+                    ,'sgrdescripcion','observaciones')
     readonly_fields = ('idintervencionclinica','integlosa','codgrupo'
                        ,'grpdescripcion','codsubgrupo','sgrdescripcion'
                        ,'inte_codigo_fonasa')
