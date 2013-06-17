@@ -75,6 +75,9 @@ class RadConceptAdmin(admin.ModelAdmin):
     inlines = [DescInline,]
     search_fields = ('fsn',)
     ordering = ('fsn',)
+    list_display = ('fsn'
+                    ,'descripciones'
+        )
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName'

@@ -30,6 +30,10 @@ class radiologico(models.Model):
 class img_concepto(models.Model):
     fsn = models.CharField('Fully Specified Name',max_length=255, )
     QDoc_Code = models.ForeignKey(radiologico, null=True, blank=True)
+    def descripciones(objeto):
+        return '<br/>'.join(c.termino for c in objeto.img_descripcione_set.order_by('id')[:3])
+    descripciones.allow_tags = True
+    descripciones.short_description = 'Descripcion'
     def __unicode__(self):
         return self.fsn
 
