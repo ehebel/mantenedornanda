@@ -150,6 +150,10 @@ class loincMapAdmin(admin.ModelAdmin):
     class Meta:
         ordering = ['id']
 
+class DescripcionesRadAdmin(admin.ModelAdmin):
+    list_display = ('termino','id_concepto','tipodescripcion')
+    class Meta:
+        ordering = ['id_concepto_id','tipodescripcion','termino']
 
 admin.site.register(Loinc, loincAdmin)
 admin.site.register(Loinc_source_organization)
@@ -158,7 +162,7 @@ admin.site.register(Sct_concept)
 admin.site.register(Sct_description)
 admin.site.register(Sct_relationship)
 admin.site.register(img_concepto,RadConceptAdmin)
-admin.site.register(img_descripcione)
+admin.site.register(img_descripcione,DescripcionesRadAdmin)
 admin.site.register(radiologico,radioAdmin)
 admin.site.register(practicas_img_HIBA,HIBA_img_Admin)
 admin.site.register(vtm)
