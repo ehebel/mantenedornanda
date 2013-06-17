@@ -76,9 +76,27 @@ class RadConceptAdmin(admin.ModelAdmin):
     search_fields = ('fsn',)
     ordering = ('fsn',)
     list_filter = ('revisado',)
+    actions = [make_revisado]
     list_display = ('fsn'
                     ,'descripciones'
         )
+    def add_view(self, request, *args, **kwargs):
+        result = super(RadConceptAdmin, self).add_view(request, *args, **kwargs )
+        request.session['filtered'] =  None
+        return result
+    def change_view(self, request, object_id, extra_context={}):
+        result = super(RadConceptAdmin, self).change_view(request, object_id, extra_context )
+        ref = request.META.get('HTTP_REFERER', '')
+        if ref.find('?') != -1:
+            request.session['filtered'] =  ref
+        if request.POST.has_key('_save'):
+            try:
+                if request.session['filtered'] is not None:
+                    result['Location'] = request.session['filtered']
+                    request.session['filtered'] = None
+            except:
+                pass
+        return result
 
 class radioAdmin(admin.ModelAdmin):
     list_display = ('QDoc_ExamName'
