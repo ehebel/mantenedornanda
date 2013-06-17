@@ -58,11 +58,15 @@ export_as_csv.short_description = "Exportar elementos seleccionados como CSV"
 
 class DescInline(admin.TabularInline):
     model = img_descripcione
+    formfield_overrides = {
+        models.CharField: {'widget': TextInput(attrs={'size':'100'})},
+        #models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
+    }
 
 class ConcRadInLine(admin.TabularInline):
     model = img_concepto
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':'150'})},
+        models.CharField: {'widget': TextInput(attrs={'size':'100'})},
         #models.TextField: {'widget': Textarea(attrs={'rows':4, 'cols':40})},
         }
 
