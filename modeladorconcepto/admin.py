@@ -75,6 +75,7 @@ class RadConceptAdmin(admin.ModelAdmin):
     inlines = [DescInline,]
     search_fields = ('fsn',)
     ordering = ('fsn',)
+    list_filter = ('revisado',)
     list_display = ('fsn'
                     ,'descripciones'
         )
