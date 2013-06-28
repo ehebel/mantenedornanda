@@ -38,8 +38,8 @@ class ges_patologia(models.Model):
     id = models.IntegerField(primary_key=True)
     glosa = models.CharField(max_length=255)
     ciediez = models.ManyToManyField(ciediez)
-    casproc = models.ManyToManyField(CASprocedimiento)
-    casdiag = models.ManyToManyField(CASdiagnostico)
+    casproc = models.ManyToManyField(casprocedimiento)
+    casdiag = models.ManyToManyField(casdiagnostico)
     def __unicode__(self):
         return self.glosa
     class Meta:
