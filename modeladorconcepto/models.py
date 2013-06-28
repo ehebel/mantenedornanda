@@ -22,6 +22,7 @@ class radiologico(models.Model):
         return '<br/>'.join(c.fsn for c in objeto.img_concepto_set.order_by('id')[:3])
     conceptos.allow_tags = True
     conceptos.short_description = 'Fully Sp. Name'
+
     def __unicode__(self):
         return self.QDoc_ExamName
     class Meta:
@@ -35,6 +36,13 @@ class img_concepto(models.Model):
         return '<br/>'.join(c.termino for c in objeto.img_descripcione_set.order_by('id')[:3])
     descripciones.allow_tags = True
     descripciones.short_description = 'Descripcion'
+
+    def get_qdoc(objqdoc):
+        return '%s'% objqdoc.QDoc_Code.QDoc_ExamName
+    get_qdoc.allow_tags = True
+    get_qdoc.short_description = 'QDoc ExamName'
+
+
     def __unicode__(self):
         return self.fsn
 

@@ -134,7 +134,8 @@ INSTALLED_APPS = (
     'mantenedornanda.mantnicapp',
     'mantenedornanda.mantnocapp',
     'mantenedornanda.modeladorcie9',
-    'mantenedornanda.modeladorconcepto'
+    'mantenedornanda.modeladorconcepto',
+    'mantenedornanda.modeladorges'
 )
 
 # A sample logging configuration. The only tangible logging

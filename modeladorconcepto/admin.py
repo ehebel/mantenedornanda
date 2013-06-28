@@ -77,7 +77,9 @@ class RadConceptAdmin(admin.ModelAdmin):
     ordering = ('fsn',)
     list_filter = ('revisado',)
     actions = [make_revisado]
-    list_display = ('fsn'
+
+    list_display = ('get_qdoc'
+                    ,'fsn'
                     ,'descripciones'
         )
     def add_view(self, request, *args, **kwargs):
