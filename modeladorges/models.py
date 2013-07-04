@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class ciediez(models.Model):
@@ -44,3 +45,8 @@ class ges_patologia(models.Model):
         return self.glosa
     class Meta:
         ordering = ['id']
+
+
+class GESform(ModelForm):
+    class Meta:
+        model = ges_patologia

@@ -76,7 +76,7 @@ class RadConceptAdmin(admin.ModelAdmin):
     search_fields = ('fsn',)
     ordering = ('fsn',)
     list_filter = ('revisado',)
-    actions = [make_revisado]
+    actions = [make_revisado, export_as_csv]
 
     list_display = ('get_qdoc'
                     ,'fsn'
@@ -173,6 +173,7 @@ class loincMapAdmin(admin.ModelAdmin):
 
 class DescripcionesRadAdmin(admin.ModelAdmin):
     list_display = ('termino','id_concepto','tipodescripcion')
+    actions = [export_as_csv]
     class Meta:
         ordering = ['id_concepto_id','tipodescripcion','termino']
 
