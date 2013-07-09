@@ -22,6 +22,10 @@ class casprocedimiento(models.Model):
     fecha = models.DateField()
     usuario_crea = models.CharField(max_length=40)
     usuario_modif = models.CharField(max_length=40)
+    def __unicode__(self):
+        return self.descripcion
+    class Meta:
+        ordering=['codigo']
 
 class casdiagnostico(models.Model):
     codigo = models.IntegerField(primary_key=True)
@@ -45,7 +49,6 @@ class ges_patologia(models.Model):
         return self.glosa
     class Meta:
         ordering = ['id']
-
 
 class GESform(ModelForm):
     class Meta:
