@@ -29,9 +29,9 @@ class casprocedimiento(models.Model):
     usuario_crea = models.CharField(max_length=40)
     usuario_modif = models.CharField(max_length=40)
     def __unicode__(self):
-        return self.descripcion
+        return self.integlosa
     class Meta:
-        ordering=['codigo']
+        ordering=['idintervencionclinica']
 
 class casdiagnostico(models.Model):
     codigo = models.IntegerField(primary_key=True)
