@@ -1,6 +1,7 @@
 from django.db import models
 from django.forms import ModelForm
 
+
 # Create your models here.
 class ciediez(models.Model):
     codigo = models.CharField(max_length=10, primary_key=True)
@@ -16,8 +17,13 @@ class ciediez(models.Model):
         ordering=['codigo']
 
 class casprocedimiento(models.Model):
-    codigo = models.IntegerField(primary_key=True)
-    descripcion = models.CharField(max_length=255)
+    idintervencionclinica = models.CharField('ID CAS',max_length=20, primary_key= True)
+    integlosa = models.CharField(max_length=255)
+    codgrupo = models.CharField(max_length=10)
+    grpdescripcion = models.CharField(max_length=255)
+    codsubgrupo = models.CharField(max_length=10)
+    sgrdescripcion = models.CharField(max_length=255)
+    inte_codigo_fonasa =  models.CharField(max_length=10)
     estado = models.CharField(max_length=20)
     fecha = models.DateField()
     usuario_crea = models.CharField(max_length=40)
@@ -42,6 +48,7 @@ class casdiagnostico(models.Model):
 class ges_patologia(models.Model):
     id = models.IntegerField(primary_key=True)
     glosa = models.CharField(max_length=255)
+    glosa_abrev = models.CharField(max_length=255, blank=True, help_text='Glosa Abreviada', verbose_name='Glosa Abreviada')
     ciediez = models.ManyToManyField(ciediez)
     casproc = models.ManyToManyField(casprocedimiento)
     casdiag = models.ManyToManyField(casdiagnostico)
