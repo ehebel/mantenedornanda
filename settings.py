@@ -136,7 +136,7 @@ INSTALLED_APPS = (
     'mantenedornanda.modeladorcie9',
     'mantenedornanda.modeladorconcepto',
     'mantenedornanda.modeladorges',
-    'autocomplete_light'
+    #'autocomplete_light'
 )
 
 # A sample logging configuration. The only tangible logging

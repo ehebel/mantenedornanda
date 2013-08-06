@@ -1,5 +1,5 @@
-import autocomplete_light
-autocomplete_light.autodiscover()
+#import autocomplete_light
+#autocomplete_light.autodiscover()
 
 from django.db import models
 from django import forms
