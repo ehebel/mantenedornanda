@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 
-import autocomplete_light
+#import autocomplete_light
 #autocomplete_light.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
