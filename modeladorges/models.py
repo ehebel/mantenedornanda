@@ -58,9 +58,3 @@ class ges_patologia(models.Model):
         return self.glosa
     class Meta:
         ordering = ['id']
-
-
-class gesAdminForm(forms.ModelForm):
-    class Meta:
-        model = ges_patologia
-        widgets = autocomplete_light.get_widgets_dict(ges_patologia)
