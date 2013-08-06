@@ -130,11 +130,11 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    #'mantenedornanda.mantnandaapp',
-    #'mantenedornanda.mantnicapp',
-    #'mantenedornanda.mantnocapp',
-    #'mantenedornanda.modeladorcie9',
-    #'mantenedornanda.modeladorconcepto',
+    'mantenedornanda.mantnandaapp',
+    'mantenedornanda.mantnicapp',
+    'mantenedornanda.mantnocapp',
+    'mantenedornanda.modeladorcie9',
+    'mantenedornanda.modeladorconcepto',
     'mantenedornanda.modeladorges',
     'autocomplete_light'
 )
