@@ -1,6 +1,8 @@
-from django.db import models
-from django.forms import ModelForm
+import autocomplete_light
+autocomplete_light.autodiscover()
 
+from django.db import models
+from django import forms
 
 # Create your models here.
 class ciediez(models.Model):
@@ -49,14 +51,16 @@ class ges_patologia(models.Model):
     id = models.IntegerField(primary_key=True)
     glosa = models.CharField(max_length=255)
     glosa_abrev = models.CharField(max_length=255, blank=True, help_text='Glosa Abreviada', verbose_name='Glosa Abreviada')
-    ciediez = models.ManyToManyField(ciediez)
-    casproc = models.ManyToManyField(casprocedimiento)
-    casdiag = models.ManyToManyField(casdiagnostico)
+    ciediez = models.ManyToManyField(ciediez, blank=True, related_name="diagnostico")
+    casproc = models.ManyToManyField(casprocedimiento, blank=True)
+    casdiag = models.ManyToManyField(casdiagnostico, blank=True)
     def __unicode__(self):
         return self.glosa
     class Meta:
         ordering = ['id']
 
-class GESform(ModelForm):
+
+class gesAdminForm(forms.ModelForm):
     class Meta:
         model = ges_patologia
+        widgets = autocomplete_light.get_widgets_dict(ges_patologia)

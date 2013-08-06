@@ -1,12 +1,14 @@
 from django.conf.urls.defaults import patterns, include, url
 
+import autocomplete_light
+autocomplete_light.autodiscover()
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+admin.autodiscover()
 from mantnandaapp import views
 import modeladorcie9.views
 
-
-admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -20,6 +22,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'autocomplete/', include('autocomplete_light.urls')),
 )
 
 # Uncomment these two lines to enable your static files on PythonAnywhere

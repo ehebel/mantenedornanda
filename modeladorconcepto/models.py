@@ -42,7 +42,6 @@ class img_concepto(models.Model):
     get_qdoc.allow_tags = True
     get_qdoc.short_description = 'QDoc ExamName'
 
-
     def __unicode__(self):
         return self.fsn
 

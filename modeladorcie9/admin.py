@@ -8,8 +8,7 @@ from django.forms import Textarea, TextInput
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-if 'delete_selected' in admin.site.actions:
-    admin.site.disable_action('delete_selected')
+
 
 class MyUserAdmin(UserAdmin):
     list_filter = UserAdmin.list_filter + ('groups__name',)

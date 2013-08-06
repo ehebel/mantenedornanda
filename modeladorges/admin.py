@@ -1,12 +1,13 @@
-__author__ = 'ehebel'
 from django.contrib import admin
+import autocomplete_light
+autocomplete_light.autodiscover()
+
 from mantenedornanda.modeladorges.models import *
 
 
-
 class gesAdmin(admin.ModelAdmin):
-
-    filter_horizontal = ['ciediez','casdiag','casproc']
-
-
+    form = gesAdminForm
 admin.site.register(ges_patologia, gesAdmin)
+
+__author__ = 'ehebel'
+
