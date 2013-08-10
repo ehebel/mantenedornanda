@@ -38,7 +38,9 @@ class img_concepto(models.Model):
     descripciones.short_description = 'Descripcion'
 
     def get_qdoc(objqdoc):
-        return '%s'% objqdoc.QDoc_Code.QDoc_ExamCode
+        return '%s;%s;%s'% (objqdoc.QDoc_Code.QDoc_ExamCode
+                            ,objqdoc.QDoc_Code.QDoc_ExamName
+                            ,objqdoc.QDoc_Code.Origin_File)
     get_qdoc.allow_tags = True
     get_qdoc.short_description = 'QDoc ExamCode'
 
