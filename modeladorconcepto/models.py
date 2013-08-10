@@ -26,7 +26,7 @@ class radiologico(models.Model):
     def __unicode__(self):
         return self.QDoc_ExamCode
     class Meta:
-        ordering=['QDoc_ExamName']
+        ordering=['QDoc_ExamCode']
 
 class img_concepto(models.Model):
     fsn = models.CharField('Fully Specified Name',max_length=255, )
@@ -38,12 +38,12 @@ class img_concepto(models.Model):
     descripciones.short_description = 'Descripcion'
 
     def get_qdoc(objqdoc):
-        return '%s'% objqdoc.QDoc_Code.QDoc_ExamName
+        return '%s'% objqdoc.QDoc_Code.QDoc_ExamCode
     get_qdoc.allow_tags = True
-    get_qdoc.short_description = 'QDoc ExamName'
+    get_qdoc.short_description = 'QDoc ExamCode'
 
     def __unicode__(self):
-        return self.fsn
+        return "%s" % (self.id)
 
 class img_descripcione(models.Model):
     OPCIONES_TIPO = (
@@ -56,12 +56,12 @@ class img_descripcione(models.Model):
     id_concepto = models.ForeignKey(img_concepto, null=True, blank=True)
     tipodescripcion = models.IntegerField(choices=OPCIONES_TIPO)
     def __unicode__(self):
-        return self.id
+        return "%s" % (self.id)
 
 class practicas_img_HIBA(models.Model):
     termino = models.CharField(max_length=255)
     def __unicode__(self):
-        return self.id
+        return self.termino
 
 class Loinc(models.Model):
     loinc_num = models.CharField(max_length=10 , primary_key=True, null=True)
