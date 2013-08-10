@@ -24,7 +24,7 @@ class radiologico(models.Model):
     conceptos.short_description = 'Fully Sp. Name'
 
     def __unicode__(self):
-        return self.QDoc_ExamCode
+        return "%s;%s;%s"% (self.QDoc_ExamCode,self.QDoc_ExamName,self.Origin_File)
     class Meta:
         ordering=['QDoc_ExamCode']
 
@@ -38,9 +38,9 @@ class img_concepto(models.Model):
     descripciones.short_description = 'Descripcion'
 
     def get_qdoc(objqdoc):
-        return '%s;%s;%s'% (objqdoc.QDoc_Code.QDoc_ExamCode
-                            ,objqdoc.QDoc_Code.QDoc_ExamName
-                            ,objqdoc.QDoc_Code.Origin_File)
+        return '%s'% (objqdoc.QDoc_Code.QDoc_ExamCode)
+#                            ,objqdoc.QDoc_Code.QDoc_ExamName
+#                            ,objqdoc.QDoc_Code.Origin_File)
     get_qdoc.allow_tags = True
     get_qdoc.short_description = 'QDoc ExamCode'
 
